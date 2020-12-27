@@ -1,3 +1,8 @@
 # PT algorithm {#pt}
 
 Here is described the algorithm used in Portugal.
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```
+

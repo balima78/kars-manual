@@ -1,3 +1,8 @@
 # UK algorithm {#uk}
 
 We have finished a nice book.
+
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```

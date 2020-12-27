@@ -1,3 +1,7 @@
 # Upload data {#data}
 
 Here is described data formate used in the app.
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```

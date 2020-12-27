@@ -5,3 +5,8 @@ Here is described the algorithm used by the countries in EuroTransplant.
 ## Example one
 
 ## Example two
+
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```

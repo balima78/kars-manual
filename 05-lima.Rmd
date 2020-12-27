@@ -1,3 +1,7 @@
 # Lima, et al algorithm {#lima}
 
 Here is described the algorithm proposed by Lima, et al
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```
