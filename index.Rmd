@@ -1,0 +1,33 @@
+--- 
+title: "KARS user manual"
+author: "Bruno A Lima"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "This is the user manula for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook."
+---
+
+# Preface {-}
+
+```{r fig.align='left', echo=FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
+doc.type <- knitr::opts_knit$get('rmarkdown.pandoc.to')
+
+knitr::include_graphics('images/kidneys.jpg', dpi = NA)
+```
+
+The Kidney Allocation Rules Simulator (KARS) is an application that allows to simulate different kidney allocation rules in transplantation.
+
+This application is builted on shiny and is available on shinyapps.io: <https://balima.shinyapps.io/kars/>
+
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

@@ -1,0 +1,3 @@
+# Lima, et al algorithm
+
+Here is described the algorithm proposed by Lima, et al
