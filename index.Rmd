@@ -24,6 +24,8 @@ The Kidney Allocation Rules Simulator (KARS) is an application that allows to si
 This application is builted on shiny and is available on shinyapps.io: <https://balima.shinyapps.io/kars/>
 
 
+Disclaimer:
+KARS application is intended for research purposes only, not for clinical or commercial use. It is a non-profit service to the scientific community, provided on an 'AS-IS' basis without any warranty, expressed or implied. The authors can not be held liable in any way for the service provided here.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
