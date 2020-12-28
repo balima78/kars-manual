@@ -1,4 +1,4 @@
-# Lima, et al algorithm {#lima}
+# Lima, et al {#lima}
 
 Here is described the algorithm proposed by Lima, et al
 

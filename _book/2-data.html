@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Upload data | KARS user manual</title>
+  <meta name="description" content="This is the user manula for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Upload data | KARS user manual" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the user manula for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Upload data | KARS user manual" />
+  
+  <meta name="twitter:description" content="This is the user manula for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
+  
+
+<meta name="author" content="Bruno A Lima" />
+
+
+<meta name="date" content="2020-12-28" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="1-intro.html"/>
+<link rel="next" href="3-pt.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">KARS user manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="1-intro.html"><a href="1-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="2-data.html"><a href="2-data.html"><i class="fa fa-check"></i><b>2</b> Upload data</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-data.html"><a href="2-data.html#example-data"><i class="fa fa-check"></i><b>2.1</b> Example data</a></li>
+<li class="chapter" data-level="2.2" data-path="2-data.html"><a href="2-data.html#users-data"><i class="fa fa-check"></i><b>2.2</b> User’s data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-pt.html"><a href="3-pt.html"><i class="fa fa-check"></i><b>3</b> Portugal</a></li>
+<li class="chapter" data-level="4" data-path="4-et.html"><a href="4-et.html"><i class="fa fa-check"></i><b>4</b> EuroTransplant</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-et.html"><a href="4-et.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
+<li class="chapter" data-level="4.2" data-path="4-et.html"><a href="4-et.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-lima.html"><a href="5-lima.html"><i class="fa fa-check"></i><b>5</b> Lima, et al</a></li>
+<li class="chapter" data-level="6" data-path="6-uk.html"><a href="6-uk.html"><i class="fa fa-check"></i><b>6</b> UK transplant</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">KARS user manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data" class="section level1">
+<h1><span class="header-section-number">2</span> Upload data</h1>
+<p>KARS app uses as inputs three files with demographic and immunological information of kidney transplant candidates and deceased donors.</p>
+<p>This application can be used with the provided sample data, or by uploading user’s data. The available sample data is simulated data for a waiting list of 500 kidney transplant candidates and for 70 potential deceased donors.</p>
+<div id="example-data" class="section level2">
+<h2><span class="header-section-number">2.1</span> Example data</h2>
+<p>The first sample dataset simulates a waiting list of 500 kidney transplant candidates, with the columns: Identifier (ID), blood group (bg), HLA-A typing (A1, A2), HLA-B typing (B1, B2 ), HLA-DRB1 typing (DR1, DR2), candidate’s age in years (age), number of months on dialysis (dialysis) and calculated Panel Reactive Antibodies (cPRA) <a href="2-data.html#tab:candidates">2.1</a>.</p>
+<table style="NAborder-bottom: 0;">
+<caption>
+<span id="tab:candidates">Table 2.1: </span>Variables for candidates dataset
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+variable
+</th>
+<th style="text-align:left;">
+description
+</th>
+<th style="text-align:left;">
+type
+</th>
+<th style="text-align:left;">
+options
+</th>
+<th style="text-align:left;">
+range
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+ID
+</td>
+<td style="text-align:left;">
+Identifier
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bg
+</td>
+<td style="text-align:left;">
+blood group
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+A, AB, B, O
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A1
+</td>
+<td style="text-align:left;">
+HLA-A allele 1
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A2
+</td>
+<td style="text-align:left;">
+HLA-A allele 2
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+B1
+</td>
+<td style="text-align:left;">
+HLA-B allele 1
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+B2
+</td>
+<td style="text-align:left;">
+HLA-B allele 2
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DR1
+</td>
+<td style="text-align:left;">
+HLA-DRB1 allele 1
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DR2
+</td>
+<td style="text-align:left;">
+HLA-DRB1 allele 2
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+age
+</td>
+<td style="text-align:left;">
+candidate’s age
+</td>
+<td style="text-align:left;">
+numeric
+</td>
+<td style="text-align:left;">
+years
+</td>
+<td style="text-align:left;">
+18-99
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dialysis
+</td>
+<td style="text-align:left;">
+time on dialysis
+</td>
+<td style="text-align:left;">
+numeric
+</td>
+<td style="text-align:left;">
+months
+</td>
+<td style="text-align:left;">
+0-999
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+cPRA
+</td>
+<td style="text-align:left;">
+calculated PRA
+</td>
+<td style="text-align:left;">
+numeric
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+0-100
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tier *
+</td>
+<td style="text-align:left;">
+Tier
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+A, B
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MS *
+</td>
+<td style="text-align:left;">
+Matchability Score
+</td>
+<td style="text-align:left;">
+numeric
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RRI *
+</td>
+<td style="text-align:left;">
+Recipient Risk Index
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+R1, R2, R3, R4
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<span style="font-style: italic;">Note: </span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> * UK only
+</td>
+</tr>
+</tfoot>
+</table></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>The second dataset compiles the HLA antibodies (abs) for each of the candidates in the previous dataset and only have two columns: Identifier (ID) and HLA-abs (abs) <a href="2-data.html#tab:abs">2.2</a>. This candidate ID must match the ID of the transplant candidates’ waiting list to allow the determination of the virtual crossmatch between each candidate and the potential cadaver donor, as described in (XXXXX).</p>
+<table>
+<caption>
+<span id="tab:abs">Table 2.2: </span>Variables for HLA-antibodies dataset
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+variable
+</th>
+<th style="text-align:left;">
+description
+</th>
+<th style="text-align:left;">
+type
+</th>
+<th style="text-align:left;">
+options
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+ID
+</td>
+<td style="text-align:left;">
+Identifier
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+abs
+</td>
+<td style="text-align:left;">
+HLA - antibodies
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+starts with: A, B or DR
+</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+<p>The last dataset compiles data from 70 potential deceased donors with the columns: Identifier (ID), blood group (bg), HLA-A typing (A1, A2), HLA-B typing (B1, B2), HLA-DRB1 typing (DR1, DR2), donor’s age in years (age) <a href="2-data.html#tab:donors">2.3</a>.</p>
+<table style="NAborder-bottom: 0;">
+<caption>
+<span id="tab:donors">Table 2.3: </span>Variables for HLA-antibodies dataset
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+variable
+</th>
+<th style="text-align:left;">
+description
+</th>
+<th style="text-align:left;">
+type
+</th>
+<th style="text-align:left;">
+options
+</th>
+<th style="text-align:left;">
+range
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+ID
+</td>
+<td style="text-align:left;">
+Identifier
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bg
+</td>
+<td style="text-align:left;">
+blood group
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+A, AB, B, O
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A1
+</td>
+<td style="text-align:left;">
+HLA-A allele 1
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A2
+</td>
+<td style="text-align:left;">
+HLA-A allele 2
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+B1
+</td>
+<td style="text-align:left;">
+HLA-B allele 1
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+B2
+</td>
+<td style="text-align:left;">
+HLA-B allele 2
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DR1
+</td>
+<td style="text-align:left;">
+HLA-DRB1 allele 1
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DR2
+</td>
+<td style="text-align:left;">
+HLA-DRB1 allele 2
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+age
+</td>
+<td style="text-align:left;">
+candidate’s age
+</td>
+<td style="text-align:left;">
+numeric
+</td>
+<td style="text-align:left;">
+years
+</td>
+<td style="text-align:left;">
+18-99
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DRI *
+</td>
+<td style="text-align:left;">
+Donor Risk Index
+</td>
+<td style="text-align:left;">
+character
+</td>
+<td style="text-align:left;">
+D1, D2, D3, D4
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<span style="font-style: italic;">Note: </span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> * UK only
+</td>
+</tr>
+</tfoot>
+</table></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>For the <em>bg</em> field (both for candidates and donors) the valid options are A, AB, B and O. The HLA typing for the <em>HLA-A, -B</em> and <em>–DRB1</em> loci must have a consistent resolution level for the HLA-antibodies identified in the second dataset, as well, with the HLA typing of potential deceased donors.</p>
+<p>This is the minimum information required for each kidney transplant candidate and potential donor, in the different kidney allocation systems (KAS) used in this app.</p>
+<p>In the case of the UK-transplant KAS, the transplant candidates’ dataset should also contain the columns: Tier, Matchability Score (MS) and Recipient Risk Index (RRI). The dataset of potential donors should also have a column with the Donor Risk Index (DRI).</p>
+</div>
+<div id="users-data" class="section level2">
+<h2><span class="header-section-number">2.2</span> User’s data</h2>
+<p>This application allow any user to upload their one data. For this purpose the user just have to select the option ‘Upload your files’ and browse the files <a href="2-data.html#fig:upload">2.1</a>.</p>
+<div class="figure" style="text-align: left"><span id="fig:upload"></span>
+<img src="images/upload.jpg" alt="'Upload your files' option" width="362" />
+<p class="caption">
+Figure 2.1: ‘Upload your files’ option
+</p>
+</div>
+<p>The data uploaded by the user must have the same format as the examples described above.If the users’ data do not have the same format the app will return the message <em>‘Candidates column names are not identical to example data!’</em>.</p>
+<p>Also, the user must be aware if he/she want to use the UK transplant algorithm, in this case the option ‘UK’ must be selected and the files must have the extra columns described in table <a href="2-data.html#tab:candidates">2.1</a> and table <a href="2-data.html#tab:donors">2.3</a>.</p>
+<p>In the KARS app the user can upload a .txt or .csv file specifying ‘File’s delimiter’ from the available options <a href="2-data.html#fig:delimiter">2.2</a>.</p>
+<div class="figure" style="text-align: left"><span id="fig:delimiter"></span>
+<img src="images/delimiter.jpg" alt="'Files delimiter' options" width="367" />
+<p class="caption">
+Figure 2.2: ‘Files delimiter’ options
+</p>
+</div>
+<p>Those files must have the same exact header (case sensitive) as the ones from the example data.</p>
+<p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="1-intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="3-pt.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["kars-manual.pdf", "kars-manual.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+variable;description;type;options
+ID;Identifier;character;
+abs;HLA - antibodies;character;starts with: A, B or DR

@@ -1,6 +1,87 @@
 # Upload data {#data}
 
-Here is described data formate used in the app.
+KARS app uses as inputs three files with demographic and immunological information of kidney transplant candidates and deceased donors.
+
+This application can be used with the provided sample data, or by uploading user’s data. The available sample data is simulated data for a waiting list of 500 kidney transplant candidates and for 70 potential deceased donors.
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```
+
+## Example data
+
+The first sample dataset simulates a waiting list of 500 kidney transplant candidates, with the columns: Identifier (ID), blood group (bg), HLA-A typing (A1, A2), HLA-B typing (B1, B2 ), HLA-DRB1 typing (DR1, DR2), candidate's age in years (age), number of months on dialysis (dialysis) and calculated Panel Reactive Antibodies (cPRA) \@ref(tab:candidates).
+
+```{r candidates, tidy=FALSE}
+options(knitr.kable.NA = '-')
+library(tidyverse)
+library(kableExtra)
+
+candvar<-read_csv2("files/candvar.csv")
+
+knitr::kable(
+  candvar, caption = 'Variables for candidates dataset',
+  booktabs = FALSE
+) %>%  footnote(general = "* UK only")
+```
+
+The second dataset compiles the HLA antibodies (abs) for each of the candidates in the previous dataset and only have two columns: Identifier (ID) and HLA-abs (abs) \@ref(tab:abs). This candidate ID must match the ID of the transplant candidates’ waiting list to allow the determination of the virtual crossmatch between each candidate and the potential cadaver donor, as described in (XXXXX).
+
+```{r abs, tidy=T}
+
+absvar<-read_csv2("files/absvar.csv")
+
+knitr::kable(
+  absvar, caption = 'Variables for HLA-antibodies dataset',
+  booktabs = TRUE
+)
+```
+
+The last dataset compiles data from 70 potential deceased donors with the columns: Identifier (ID), blood group (bg), HLA-A typing (A1, A2), HLA-B typing (B1, B2), HLA-DRB1 typing (DR1, DR2), donor's age in years (age) \@ref(tab:donors).
+
+```{r donors, tidy=T}
+
+donorvar<-read_csv2("files/donorvar.csv")
+
+knitr::kable(
+  donorvar, caption = 'Variables for HLA-antibodies dataset',
+  booktabs = TRUE
+) %>%  footnote(general = "* UK only")
+```
+
+This is the minimum information required for each kidney transplant candidate and potential donor, in the different kidney allocation systems (KAS) used in this app.
+
+In the case of the UK-transplant KAS, the transplant candidates' dataset should also contain the columns: Tier, Matchability Score (MS) and Recipient Risk Index (RRI). The dataset of potential donors should also have a column with the Donor Risk Index (DRI).
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```
+
+## User's data
+
+This application allow any user to upload their one data. For this purpose the user just have to select the option 'Upload your files' and browse the files \@ref(fig:upload).
+
+```{r upload, fig.cap="'Upload your files' option", fig.align='left'}
+knitr::include_graphics('images/upload.jpg', dpi = 100)
+```
+
+The data uploaded by the user must have the same format as the examples described above.If the users' data do not have the same format the app will return the message *'Candidates column names are not identical to example data!'*.
+
+Also, the user must be aware if he/she want to use the UK transplant algorithm, in this case the option 'UK' must be selected and the files must have the extra columns described in table \@ref(tab:candidates) and table \@ref(tab:donors).
+
+In the KARS app the user can upload a .txt or .csv file specifying 'File's delimiter' from the available options \@ref(fig:delimiter). 
+
+```{r delimiter, fig.cap="'Files delimiter' options", fig.align='left'}
+knitr::include_graphics('images/delimiter.jpg', dpi = 100)
+```
+
+Those files must have the same exact header (case sensitive) as the ones from the example data.
+
+For the *bg* field (both for candidates and donors) the valid options are A, AB, B and O. 
+
+The HLA typing for the *HLA-A, -B* and *–DRB1* loci must have a consistent resolution level for the HLA-antibodies identified in the second dataset, as well, with the HLA typing of potential deceased donors. For instance, if HLA typing for the candidates is in serological resolution so the donor's typing and identified HLA antibodies must be in serological resolution. In like manner, for a genotyping resolution all HLA must be consistent. When the allele have a 0 on the left (meaning A01 or DR04) it can be omitted only if this always the case as we do in our example data. By the same token, on our example data, if donors have the values **1** and **4** for columns *DR1* and *DR2*, so the correspondent HLA antibodies in the second dataset (\@ref(tab:donors)) will be **DR1** and **DR4**, respectively.
+
+In order to avoid problems with blanks on HLA typing, candidates and / or donors must be considered homozigous and the alleles must be repeated (as an example: instead of *B15,-* consider *B15,15*) 
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)

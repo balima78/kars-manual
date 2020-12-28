@@ -1,0 +1,11 @@
+variable;description;type;options;range
+ID;Identifier;character;;
+bg;blood group;character;A, AB, B, O;
+A1;HLA-A allele 1;character;;
+A2;HLA-A allele 2;character;;
+B1;HLA-B allele 1;character;;
+B2;HLA-B allele 2;character;;
+DR1;HLA-DRB1 allele 1;character;;
+DR2;HLA-DRB1 allele 2;character;;
+age;candidate's age;numeric;years;18-99
+DRI *;Donor Risk Index;character;D1, D2, D3, D4;

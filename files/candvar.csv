@@ -1,0 +1,15 @@
+variable;description;type;options;range
+ID;Identifier;character;;
+bg;blood group;character;A, AB, B, O;
+A1;HLA-A allele 1;character;;
+A2;HLA-A allele 2;character;;
+B1;HLA-B allele 1;character;;
+B2;HLA-B allele 2;character;;
+DR1;HLA-DRB1 allele 1;character;;
+DR2;HLA-DRB1 allele 2;character;;
+age;candidate's age;numeric;years;18-99
+dialysis;time on dialysis;numeric;months;0-999
+cPRA;calculated PRA ;numeric;;0-100
+Tier *;Tier;character;A, B;
+MS *;Matchability Score;numeric;;
+RRI *;Recipient Risk Index;character;R1, R2, R3, R4;

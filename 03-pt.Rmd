@@ -1,4 +1,4 @@
-# PT algorithm {#pt}
+# Portugal {#pt}
 
 Here is described the algorithm used in Portugal.
 
