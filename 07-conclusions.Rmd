@@ -1,0 +1,15 @@
+# Conclusions {#conclusion}
+
+An allocation system for deceased donor kidneys should be anchored to transparent policies. It should take into account the relationship between supply and demand, hence seeking a balance between the higher net benefit of survival that can be provided by a particular organ and the transplant candidates’ waiting time (as well as the probability of being transplanted) [@Lima2013c].
+
+The discussion about access to kidney transplantation with deceased donors never comes to a close
+and must be done clearly and systematically in order to enable the best decisions at any given moment [@Lima2013c].
+
+Kidney transplantation is the preferred treatment for many ESRD patients; however, the small number of organs for transplantation does not allow all patients to have access to this scarce resource. So, it is of utmost importance to define objective and systematic metrics with clinical utility that allow making informed decisions when health policies are established for the distribution of an organ [@Lima2014].
+
+
+
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```

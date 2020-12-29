@@ -1,24 +1,28 @@
 # Introduction {#intro}
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+Kidney transplantation main challenges are: achieving better outcomes for patients and grafts, improving recipients’ quality of life and increasing the number of available organs [@Lima2013a].
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+The demand for kidneys for transplantation grows daily due to the successful treatment of many patients with end stage renal disease. Although, the limited number of organs available for transplantation requires that their distribution be made as equitable as possible in order to optimize the use of this scarce resource [@Lima2013b].
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
+For patients with end stage renal disease, kidney transplantation provides a lower mortality, reduction of cardiovascular problems and a better quality of life compared with those on dialysis, even for those with advanced age or co-morbidities [@Lima2013c].
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+Criteria such as: clinical urgency, waiting time, diagnosis, duration of ischaemia, transplant outcomes, number of organs available for paediatric transplants, transplantation in the elderly,
+time on dialysis, human leukocyte antigen (HLA) compatibility and the presence or absence of HLA antibodies; should be taken into account when discussing access to kidney transplantation [@Lima2013c].
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
+This user's manual describes how to use the Kidney Allocation Rules Simulator (KARS) app available from here: <https://balima.shinyapps.io/kars/>.
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+The manual is divided in 7 chapters, the first one is this **Introduction** (\@ref(intro)), the last one is a simple **Conclusion** (\@ref(conclusion)) and the remaining 5 correspond to the 5 modules on KARS app, four of them  are different Kidney Allocation Systems (KAS).  
+
+The chapter \@ref(data) describe the type of data used in the application and how the user can upload their own data. This data is not stored anywhere on our app and the responsibility for its usage is entirely from the user. 
+
+Chapter \@ref(pt) presents the Portuguese algorithm on the allocation of kidneys from deceased donors and how the user can modify some parameters in order to understand how it works.
+
+In chapter \@ref(et) the KAS from EuroTransplnat is described and it's merits discussed.
+
+Chapter \@ref(lima) present a KAS published by us in 2013 [@Lima2013c] and was intented to give a simple (maybe too simple) solution for a complex problem. 
+
+And at last, chapter \@ref(uk) is dedicated to the KAS from the UK transplant. Those set of rules are the more recent and probably more complex.  
+
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)

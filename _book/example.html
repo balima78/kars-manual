@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="data.html"/>
-<link rel="next" href="users-data.html"/>
+<link rel="next" href="users.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -74,8 +74,8 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Upload data</a><ul>
-<li class="chapter" data-level="2.1" data-path="example-data.html"><a href="example-data.html"><i class="fa fa-check"></i><b>2.1</b> Example data</a></li>
-<li class="chapter" data-level="2.2" data-path="users-data.html"><a href="users-data.html"><i class="fa fa-check"></i><b>2.2</b> User’s data</a></li>
+<li class="chapter" data-level="2.1" data-path="example.html"><a href="example.html"><i class="fa fa-check"></i><b>2.1</b> Example data</a></li>
+<li class="chapter" data-level="2.2" data-path="users.html"><a href="users.html"><i class="fa fa-check"></i><b>2.2</b> User’s data</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="pt.html"><a href="pt.html"><i class="fa fa-check"></i><b>3</b> Portugal</a></li>
 <li class="chapter" data-level="4" data-path="et.html"><a href="et.html"><i class="fa fa-check"></i><b>4</b> EuroTransplant</a><ul>
@@ -106,9 +106,9 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="example-data" class="section level2">
+<div id="example" class="section level2">
 <h2><span class="header-section-number">2.1</span> Example data</h2>
-<p>The first sample dataset simulates a waiting list of 500 kidney transplant candidates, with the columns: Identifier (ID), blood group (bg), HLA-A typing (A1, A2), HLA-B typing (B1, B2 ), HLA-DRB1 typing (DR1, DR2), candidate’s age in years (age), number of months on dialysis (dialysis) and calculated Panel Reactive Antibodies (cPRA) <a href="example-data.html#tab:candidates">2.1</a>.</p>
+<p>The first sample dataset simulates a waiting list of 500 kidney transplant candidates, with the columns: Identifier (ID), blood group (bg), HLA-A typing (A1, A2), HLA-B typing (B1, B2 ), HLA-DRB1 typing (DR1, DR2), candidate’s age in years (age), number of months on dialysis (dialysis) and calculated Panel Reactive Antibodies (cPRA) <a href="example.html#tab:candidates">2.1</a>.</p>
 <table style="NAborder-bottom: 0;">
 <caption>
 <span id="tab:candidates">Table 2.1: </span>Variables for candidates dataset
@@ -405,7 +405,7 @@ R1, R2, R3, R4
 </ul></li>
 </ul></li>
 </ul>
-<p>The second dataset compiles the HLA antibodies (abs) for each of the candidates in the previous dataset and only have two columns: Identifier (ID) and HLA-abs (abs) <a href="example-data.html#tab:abs">2.2</a>. This candidate ID must match the ID of the transplant candidates’ waiting list to allow the determination of the virtual crossmatch between each candidate and the potential cadaver donor, as described in (XXXXX).</p>
+<p>The second dataset compiles the HLA antibodies (abs) for each of the candidates in the previous dataset and only have two columns: Identifier (ID) and HLA-abs (abs) <a href="example.html#tab:abs">2.2</a>. This candidate ID must match the ID of the transplant candidates’ waiting list to allow the determination of the virtual crossmatch between each candidate and the potential cadaver donor, as described in (<a href="pt.html#pt">3</a>).</p>
 <table>
 <caption>
 <span id="tab:abs">Table 2.2: </span>Variables for HLA-antibodies dataset
@@ -458,7 +458,7 @@ starts with: A, B or DR
 </tbody>
 </table></li>
 </ul>
-<p>The last dataset compiles data from 70 potential deceased donors with the columns: Identifier (ID), blood group (bg), HLA-A typing (A1, A2), HLA-B typing (B1, B2), HLA-DRB1 typing (DR1, DR2), donor’s age in years (age) <a href="example-data.html#tab:donors">2.3</a>.</p>
+<p>The last dataset compiles data from 70 potential deceased donors with the columns: Identifier (ID), blood group (bg), HLA-A typing (A1, A2), HLA-B typing (B1, B2), HLA-DRB1 typing (DR1, DR2), donor’s age in years (age) <a href="example.html#tab:donors">2.3</a>.</p>
 <table style="NAborder-bottom: 0;">
 <caption>
 <span id="tab:donors">Table 2.3: </span>Variables for HLA-antibodies dataset
@@ -684,7 +684,7 @@ D1, D2, D3, D4
 </ul></li>
 </ul>
 <p>This is the minimum information required for each kidney transplant candidate and potential donor, in the different kidney allocation systems (KAS) used in this app.</p>
-<p>In the case of the UK-transplant KAS, the transplant candidates’ dataset should also contain the columns: Tier, Matchability Score (MS) and Recipient Risk Index (RRI). The dataset of potential donors should also have a column with the Donor Risk Index (DRI).</p>
+<p>In the case of the UK-transplant KAS, the transplant candidates’ dataset should also contain the columns: Tier, Matchability Score (MS) and Recipient Risk Index (RRI). The dataset of potential donors should also have a column with the Donor Risk Index (DRI) as described in <a href="uk.html#uk">6</a>.</p>
 <p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
 </div>
             </section>
@@ -693,7 +693,7 @@ D1, D2, D3, D4
         </div>
       </div>
 <a href="data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="users-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="users.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

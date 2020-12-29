@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 EuroTransplant | KARS user manual</title>
+  <title>2.2 User’s data | KARS user manual</title>
   <meta name="description" content="This is the user manula for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 EuroTransplant | KARS user manual" />
+  <meta property="og:title" content="2.2 User’s data | KARS user manual" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 EuroTransplant | KARS user manual" />
+  <meta name="twitter:title" content="2.2 User’s data | KARS user manual" />
   
   <meta name="twitter:description" content="This is the user manula for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="pt.html"/>
-<link rel="next" href="example-one.html"/>
+<link rel="prev" href="example.html"/>
+<link rel="next" href="pt.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -106,17 +106,48 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="et" class="section level1">
-<h1><span class="header-section-number">4</span> EuroTransplant</h1>
-<p>Here is described the algorithm used by the countries in EuroTransplant.</p>
+<div id="users" class="section level2">
+<h2><span class="header-section-number">2.2</span> User’s data</h2>
+<p>This application allow any user to upload their own data. For this purpose the user just have to select the option ‘Upload your files’ and browse the files <a href="users.html#fig:upload">2.1</a>.</p>
+<div class="figure" style="text-align: left"><span id="fig:upload"></span>
+<img src="images/upload.jpg" alt="'Upload your files' option" width="362" />
+<p class="caption">
+Figure 2.1: ‘Upload your files’ option
+</p>
 </div>
+<p>The data uploaded by the user must have the same format as the examples described in <a href="example.html#example">2.1</a>. If the users’ data do not have the same format the app will return the message:</p>
+<div class="message">
+<p>
+Candidates column names are not identical to example data!
+</p>
+</div>
+<p>Also, the user must be aware if he/she want to use the UK transplant algorithm. In this case the option ‘UK’ must be selected and the files must have the extra columns described in table <a href="example.html#tab:candidates">2.1</a> and table <a href="example.html#tab:donors">2.3</a>.</p>
+<p>In the KARS app the user can upload a .txt or .csv file specifying ‘File’s delimiter’ from the available options <a href="users.html#fig:delimiter">2.2</a>.</p>
+<div class="figure" style="text-align: left"><span id="fig:delimiter"></span>
+<img src="images/delimiter.jpg" alt="'Files delimiter' options" width="367" />
+<p class="caption">
+Figure 2.2: ‘Files delimiter’ options
+</p>
+</div>
+<p>Those files must have the same exact header (case sensitive) as the ones from the example data.</p>
+<p>For the <em>bg</em> field (both for candidates and donors) the valid options are A, AB, B and O.</p>
+<p>The HLA typing for the <em>HLA-A, -B</em> and <em>–DRB1</em> loci must have a consistent resolution level for the HLA-antibodies identified in the second dataset, as well, with the HLA typing of potential deceased donors. For instance, if HLA typing for the candidates is in serological resolution so the donor’s typing and identified HLA antibodies must be in serological resolution. In like manner, for a genotyping resolution all HLA must be consistent. When the allele have a 0 on the left (meaning A01 or DR04) it can be omitted only if this always the case as we do in our example data. By the same token, on our example data, if donors have the values <strong>1</strong> and <strong>4</strong> for columns <em>DR1</em> and <em>DR2</em>, so the correspondent HLA antibodies in the second dataset (<a href="example.html#tab:donors">2.3</a>) will be <strong>DR1</strong> and <strong>DR4</strong>, respectively.</p>
+<div class="warning">
+<p>
+In order to avoid problems with blanks on HLA typing, candidates and / or donors must be considered homozigous and the alleles must be repeated (as an example: instead of <em>B15,-</em> consider <em>B15,15</em>)
+</p>
+</div>
+<p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
+
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="pt.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="example-one.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="example.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pt.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
