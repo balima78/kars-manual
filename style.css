@@ -13,7 +13,7 @@ pre code {
   white-space: inherit;
 }
 
-.message {
+.message, .warning, .bookm {
   padding: 1em 1em 1em 4em;
   margin-bottom: 10px;
   background: #f5f5f5;
@@ -29,15 +29,17 @@ pre code {
     font-size: 25px;
  }
  
-.warning {
-  padding: 1em 1em 1em 4em;
-  margin-bottom: 10px;
-  background: #f5f5f5;
-  position:relative;
-}
-
 .warning:before {
     content: "\f071";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    top:0px;
+    font-size: 25px;
+ }
+ 
+.bookm:before {
+    content: "\f02e";
     font-family: FontAwesome;
     left:10px;
     position:absolute;

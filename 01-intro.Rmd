@@ -23,6 +23,10 @@ Chapter \@ref(lima) present a KAS published by us in 2013 [@Lima2013c] and was i
 
 And at last, chapter \@ref(uk) is dedicated to the KAS from the UK transplant. Those set of rules are the more recent and probably more complex.  
 
+```{block, type='bookm', echo = T}
+**Disclaimer:**
+KARS application is intended for research purposes only, not for clinical or commercial use. It is a non-profit service to the scientific community, provided on an 'AS-IS' basis without any warranty, expressed or implied. The authors can not be held liable in any way for the service provided here.
+```
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)

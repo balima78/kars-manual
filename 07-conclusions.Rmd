@@ -7,6 +7,10 @@ and must be done clearly and systematically in order to enable the best decision
 
 Kidney transplantation is the preferred treatment for many ESRD patients; however, the small number of organs for transplantation does not allow all patients to have access to this scarce resource. So, it is of utmost importance to define objective and systematic metrics with clinical utility that allow making informed decisions when health policies are established for the distribution of an organ [@Lima2014].
 
+```{block, type='bookm', echo = T}
+**Disclaimer:**
+KARS application is intended for research purposes only, not for clinical or commercial use. It is a non-profit service to the scientific community, provided on an 'AS-IS' basis without any warranty, expressed or implied. The authors can not be held liable in any way for the service provided here.
+```
 
 
 

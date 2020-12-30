@@ -89,6 +89,9 @@ The HLA typing for the *HLA-A, -B* and *–DRB1* loci must have a consistent res
 In order to avoid problems with blanks on HLA typing, candidates and / or donors must be considered homozigous and the alleles must be repeated (as an example: instead of *B15,-* consider *B15,15*) 
 ```
 
+For candidates' dataset we recommend a sample size no longer than 2000 and for donors' dataset a ratio of 1 to 7 candidates. Meaning, for 700 candidates use at most 100 donors. 
+
+This ratio is suggested as guarantee that the selected candidates for each KAS are comparable and we can spot differences due to KAS rules. As each donor is allocated to two candidates, with a number of donors close to half the number of candidates we will have almost all candidates selected for all KAS. 
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)
