@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | KARS user manual</title>
+  <title>3.2 Model simulation | KARS user manual</title>
   <meta name="description" content="This is the user manula for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | KARS user manual" />
+  <meta property="og:title" content="3.2 Model simulation | KARS user manual" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | KARS user manual" />
+  <meta name="twitter:title" content="3.2 Model simulation | KARS user manual" />
   
   <meta name="twitter:description" content="This is the user manula for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="conclusion.html"/>
-
+<link rel="prev" href="ptoptions.html"/>
+<link rel="next" href="et.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -109,32 +109,46 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="model-simulation" class="section level2">
+<h2><span class="header-section-number">3.2</span> Model simulation</h2>
+<p>On the main panel of the <em>Portugal</em> module, we can run the simulation for <strong>One donor</strong> or for <strong>Multiple donors</strong>.</p>
+<p>When selected the option for <strong>One donor</strong> (figure <a href="model-simulation.html#fig:ptonedonor">3.2</a>), the user can input donor’s age, his blood group and his HLA typing.</p>
+<div class="figure" style="text-align: left"><span id="fig:ptonedonor"></span>
+<img src="images/ptonedonor.jpg" alt="Donor's characteristics"  />
+<p class="caption">
+Figure 3.2: Donor’s characteristics
+</p>
+</div>
+<p>According to the donor’s characteristics the <em>top 10 selected candidates for this specific donor</em> are tabled. This candidates can be selected from the example data, provided with the app, or from the dataset uploaded by the user. In this last scenario the user must upload also a dataset with candidates’ HLA antibodies otherwise a message is displayed:</p>
+<div class="message">
+<p>
+Please select candidates’ HLA antibodies data set!
+</p>
+</div>
+<p>When selected the option for <strong>Multiple donors</strong> (figure <a href="model-simulation.html#fig:ptmultdonor">3.3</a>) the user just have to click on <em>‘Select your options an run it!’</em> and wait for the results.</p>
+<div class="figure" style="text-align: left"><span id="fig:ptmultdonor"></span>
+<img src="images/ptmultdonor.jpg" alt="Donor's characteristics"  />
+<p class="caption">
+Figure 3.3: Donor’s characteristics
+</p>
+</div>
+<div class="warning">
+<p>
+Depending on the size of the uploaded data, the run can take several seconds. Be patient!
+</p>
+</div>
+<p>After the run, a dataset (dowloable) with the selected candidates and a table with a summary of the candidates characteristics are displayed.</p>
 <p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
 
-<div id="refs" class="references">
-<div>
-<p>Lima, BA, M Mendes, and H Alves. 2013a. “Candidatos Hipersensibilizados a Transplantação Renal Em Portugal.” <em>Port J Nephrol Hypert</em> 27(2): 77–81.</p>
 </div>
-<div>
-<p>———. 2013b. “Kidney Transplant Allocation in Portugal.” <em>Port J Nephrol Hypert</em> 27(4): 313–16.</p>
-</div>
-<div>
-<p>———. 2013c. “Kidney Transplantation in the North of Portugal: Donor Type and Recipient Time on Dialysis.” <em>Port J Nephrol Hypert</em> 27(1): 23–30.</p>
-</div>
-<div>
-<p>———. 2014. “Measuring Kidney Transplantation Activity.” <em>Port J Nephrol Hypert</em> 28(2): 171–76.</p>
-</div>
-</div>
-</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="conclusion.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="ptoptions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="et.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,0 +1,14 @@
+Criteria ;Points
+HLA mismatches (mm)*;
+a) Without mm for HLA-A, B and DR;12
+b) Without mm for HLA-B and DR;8
+c) One mm for HLA-B or DR;4
+d) One mm for HLA-B and one for HLA-DR;2
+e) Others;1
+cPRA > 85%;8
+cPRA > 50%;4
+Time on dialysis (each month) ;0.1
+Age difference between donor and receptor;
+Donor > 60 and receptor < 55;0
+Donor < 40 and receptor > 55;0
+Remaining possibilities;4
