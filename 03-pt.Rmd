@@ -23,7 +23,7 @@ knitr::include_graphics('images/kars.jpg', dpi = 200)
 
 ## User's options {#ptoptions}
 
-From the KARS app (module *Portugal*) we can simulate the rules from the PT model setting the score as we pleased. On the sidebar panel the default punctuation (figure \@ref(fig:ptpoints)) is presented but the user can mess with it and apply new set of scores to the list of candidates.
+From the KARS app (module *Portugal*) we can simulate the rules from the PT model, setting the scores as we pleased. On the sidebar panel the default punctuation (figure \@ref(fig:ptpoints)) is presented but the user can mess with it and apply new set of scores to order the list of candidates for given donor.
 
 ```{r ptpoints, fig.cap="Punctation for PT model", fig.align='left'}
 knitr::include_graphics('images/ptpoints.jpg', dpi = NA)
