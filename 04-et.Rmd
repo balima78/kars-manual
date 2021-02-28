@@ -1,6 +1,67 @@
 # EuroTransplant {#et}
 
-Here is described the algorithm used by the countries in EuroTransplant.
+EuroTransplant Kidney Allocation System (ETKAS) from decesead donors for transplantation is described at [EuroTransplant.org](https://www.eurotransplant.org/organs/kidney/). A detailed description of ETKAS rules can be found from [here](https://www.eurotransplant.org/wp-content/uploads/2020/01/H4-Kidney.pdf). 
+
+From KARS app we can simulate a simplified version of ETKAS for first time kidney only candidates with more than 18 years old, no high clinical urgency and not having donate one of their own kidneys. In this simulation for each donor, transplant candidates are sorted as (figure \@ref(fig:ETflow)):  
+
+ - Seniors (65+ years of old when the donor has 65+ years) 
+ 
+ - on the Acceptable Mismatch Program (a cPRA > 85% and without HLA antibodies against HLA's donor) 
+ 
+ - 000 HLA mismatches (without HLA mismatches with the donor) 
+ 
+ - ETKAS points
+ 
+```{r ETflow, fig.cap="ETKAS candidates ordering ", fig.align='left'}
+library(DiagrammeR)
+
+DiagrammeR::grViz("
+digraph ETgraph {
+
+graph [layout = dot]
+
+# node definitions with substituted label text
+node [shape = rectangle, width = 4, fillcolor = Biege]
+a [label = '@@1']
+b [label = '@@2']
+c [label = '@@3']
+d [label = '@@4']
+
+a -> b -> c -> d
+
+}
+
+[1]: 'Senior Program'
+[2]: 'Acceptable Mismatche Program'
+[3]: '000 HLA mismatches'
+[4]: 'ETKAS points'
+")
+```
+ 
+Candidates on Senior Program are ordered only based on their time on dialysis. Patients on  Acceptable Mismatch Program do not need to have the same blood group with the donor, those ABO compatible also opt to the donor and are ordered according to ETKAS points.
+
+All remaing candidates need to have a negative virtual crossmatch with the donor regarding their HLA antibodies and must be ABO identical before ordering by their ETKAS points.
+
+When entering in waiting list candidates' Mismatch Probability is computed as the probability of receiving a kidney offer with 0 or 1 HLA-A, -B, -DR mismatch based on 1000 kidneys offered. This MMP can be calculated based on Dutch or Portuguese HLA antigen frequencies (this is a KARS app option). Detailed formulas can be found [here](https://www.eurotransplant.org/wp-content/uploads/2020/01/H4-Kidney.pdf).
+
+```{r pointsET, tidy=FALSE}
+options(knitr.kable.NA = '')
+
+ord6357<-read_csv2("files/pointsET.csv")
+
+knitr::kable(
+  ord6357, caption = 'Points for ETKAS model',
+  booktabs = FALSE
+) 
+```
+
+Final points for each compatible candidate are obtain from the sum of HLA points, dialysis points (as descibed in table \@ref(tab:pointsET)) and MMP points.
+
+Also, no regional or country points are considered.
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```
 
 ## Example one
 
