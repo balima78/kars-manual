@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Upload data | KARS users’ manual</title>
+  <title>4.1 ETKAS points | KARS users’ manual</title>
   <meta name="description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Upload data | KARS users’ manual" />
+  <meta property="og:title" content="4.1 ETKAS points | KARS users’ manual" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Upload data | KARS users’ manual" />
+  <meta name="twitter:title" content="4.1 ETKAS points | KARS users’ manual" />
   
   <meta name="twitter:description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="intro.html"/>
-<link rel="next" href="example.html"/>
+<link rel="prev" href="et.html"/>
+<link rel="next" href="etoptions.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -128,10 +128,117 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data" class="section level1">
-<h1><span class="header-section-number">2</span> Upload data</h1>
-<p>KARS app uses as inputs three files with demographic and immunological information of kidney transplant candidates and deceased donors.</p>
-<p>This application can be used with the provided example data, or by uploading users’ data. The available example data is simulated data for a waiting list of 500 kidney transplant candidates and for 70 potential deceased donors.</p>
+<div id="etkas-points" class="section level2">
+<h2><span class="header-section-number">4.1</span> ETKAS points</h2>
+<p>When entering in waiting list candidates’ Mismatch Probability is computed as the probability of receiving a kidney offer with 0 or 1 HLA-A, -B, -DR mismatch based on 1000 kidneys offered. This MMP can be calculated based on Dutch or Portuguese HLA antigen frequencies (this is a KARS app option). Detailed formulas can be found <a href="https://www.eurotransplant.org/wp-content/uploads/2020/01/H4-Kidney.pdf">here</a>.</p>
+<table>
+<caption>
+<span id="tab:pointsET">Table 4.1: </span>Points for ETKAS model
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Criteria
+</th>
+<th style="text-align:right;">
+Points
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+HLA-A, -B, -DR mismatches
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol style="list-style-type: lower-alpha">
+<li>0
+</td>
+<td style="text-align:right;">
+400.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="2" style="list-style-type: lower-alpha">
+<li>1
+</td>
+<td style="text-align:right;">
+333.33
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: lower-alpha">
+<li>2
+</td>
+<td style="text-align:right;">
+266.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="4" style="list-style-type: lower-alpha">
+<li>3
+</td>
+<td style="text-align:right;">
+200.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="5" style="list-style-type: lower-alpha">
+<li>4
+</td>
+<td style="text-align:right;">
+133.33
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="6" style="list-style-type: lower-alpha">
+<li>5
+</td>
+<td style="text-align:right;">
+66.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="7" style="list-style-type: lower-alpha">
+<li>6
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Time on dialysis (each month)
+</td>
+<td style="text-align:right;">
+2.78
+</td>
+</tr>
+</tbody>
+</table></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol>
+<p>Final points for each eligible candidate are obtain from the sum of HLA points, dialysis points (as described in table <a href="etkas-points.html#tab:pointsET">4.1</a>) and MMP points.</p>
+<div class="warning">
+<p>
+In the simulations performed within KARS app, no regional or country points are considered!
+</p>
+</div>
 <p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
 </div>
             </section>
@@ -139,8 +246,8 @@
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="example.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="et.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="etoptions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

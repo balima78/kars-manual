@@ -11,5 +11,5 @@ age;candidate's age;numeric;years;18-99
 dialysis;time on dialysis;numeric;months;0-999
 cPRA;calculated PRA ;numeric;;0-100
 Tier *;Tier;character;A, B;
-MS *;Matchability Score;numeric;;
+MS *;Match Score;numeric;;
 RRI *;Recipient Risk Index;character;R1, R2, R3, R4;

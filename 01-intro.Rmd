@@ -2,18 +2,18 @@
 
 Kidney transplantation main challenges are: achieving better outcomes for patients and grafts, improving recipients’ quality of life and increasing the number of available organs [@Lima2013a].
 
-The demand for kidneys for transplantation grows daily due to the successful treatment of many patients with end stage renal disease. Although, the limited number of organs available for transplantation requires that their distribution be made as equitable as possible in order to optimize the use of this scarce resource [@Lima2013b].
+The demand for kidneys for transplantation grows daily due to the successful treatment of many patients with end stage renal disease. Although, the limited number of organs available for transplantation requires that their distribution must be made as equitable as possible in order to optimize the use of this scarce resource [@Lima2013b].
 
 For patients with end stage renal disease, kidney transplantation provides a lower mortality, reduction of cardiovascular problems and a better quality of life compared with those on dialysis, even for those with advanced age or co-morbidities [@Lima2013c].
 
 Criteria such as: clinical urgency, waiting time, diagnosis, duration of ischaemia, transplant outcomes, number of organs available for paediatric transplants, transplantation in the elderly,
 time on dialysis, human leukocyte antigen (HLA) compatibility and the presence or absence of HLA antibodies; should be taken into account when discussing access to kidney transplantation [@Lima2013c].
 
-This user's manual describes how to use the Kidney Allocation Rules Simulator (KARS) app available from here: <https://balima.shinyapps.io/kars/>.
+This users' manual describes how to use the Kidney Allocation Rules Simulator (KARS) app available from here: <https://balima.shinyapps.io/kars/>.
 
 The manual is divided in 7 chapters, the first one is this **Introduction** (\@ref(intro)), the last one is a simple **Conclusion** (\@ref(conclusion)) and the remaining 5 correspond to the 5 modules on KARS app, four of them  are different Kidney Allocation Systems (KAS).  
 
-The chapter \@ref(data) describe the type of data used in the application and how the user can upload their own data. This data is not stored anywhere on our app and the responsibility for its usage is entirely from the user. 
+The chapter \@ref(data) describe the type of data used in the application and how the user can upload their own data. This data is not stored anywhere on our app and the responsibility for its usage is entirely to the user. 
 
 Chapter \@ref(pt) presents the Portuguese algorithm on the allocation of kidneys from deceased donors and how the user can modify some parameters in order to understand how it works.
 

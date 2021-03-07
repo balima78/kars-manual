@@ -1,6 +1,6 @@
 # EuroTransplant {#et}
 
-EuroTransplant Kidney Allocation System (ETKAS) from decesead donors for transplantation is described at [EuroTransplant.org](https://www.eurotransplant.org/organs/kidney/). A detailed description of ETKAS rules can be found from [here](https://www.eurotransplant.org/wp-content/uploads/2020/01/H4-Kidney.pdf). 
+EuroTransplant Kidney Allocation System (ETKAS) from decesead donors for transplantation is described at [EuroTransplant.org](https://www.eurotransplant.org/organs/kidney/). A detailed description of ETKAS rules can be found  [here](https://www.eurotransplant.org/wp-content/uploads/2020/01/H4-Kidney.pdf). 
 
 From KARS app we can simulate a simplified version of ETKAS for first time kidney only candidates with more than 18 years old, no high clinical urgency and not having donate one of their own kidneys. In this simulation for each donor, transplant candidates are sorted as (figure \@ref(fig:ETflow)):  
 
@@ -12,7 +12,7 @@ From KARS app we can simulate a simplified version of ETKAS for first time kidne
  
  - ETKAS points
  
-```{r ETflow, fig.cap="ETKAS candidates ordering ", fig.align='left'}
+```{r ETflow, fig.cap="ETKAS candidates' ordering ", fig.align='left'}
 library(DiagrammeR)
 
 DiagrammeR::grViz("
@@ -32,15 +32,17 @@ a -> b -> c -> d
 }
 
 [1]: 'Senior Program'
-[2]: 'Acceptable Mismatche Program'
+[2]: 'Acceptable Mismatch Program'
 [3]: '000 HLA mismatches'
 [4]: 'ETKAS points'
 ")
 ```
  
-Candidates on Senior Program are ordered only based on their time on dialysis. Patients on  Acceptable Mismatch Program do not need to have the same blood group with the donor, those ABO compatible also opt to the donor and are ordered according to ETKAS points.
+Candidates on Senior Program are ordered only based on their time on dialysis. Patients on  Acceptable Mismatch Program do not need to have the same blood group as the donor, those ABO compatible also opt to the donor and are ordered according to ETKAS points.
 
 All remaing candidates need to have a negative virtual crossmatch with the donor regarding their HLA antibodies and must be ABO identical before ordering by their ETKAS points.
+
+## ETKAS points
 
 When entering in waiting list candidates' Mismatch Probability is computed as the probability of receiving a kidney offer with 0 or 1 HLA-A, -B, -DR mismatch based on 1000 kidneys offered. This MMP can be calculated based on Dutch or Portuguese HLA antigen frequencies (this is a KARS app option). Detailed formulas can be found [here](https://www.eurotransplant.org/wp-content/uploads/2020/01/H4-Kidney.pdf).
 
@@ -55,17 +57,57 @@ knitr::kable(
 ) 
 ```
 
-Final points for each compatible candidate are obtain from the sum of HLA points, dialysis points (as descibed in table \@ref(tab:pointsET)) and MMP points.
+Final points for each eligible candidate are obtain from the sum of HLA points, dialysis points (as described in table \@ref(tab:pointsET)) and MMP points.
 
-Also, no regional or country points are considered.
+```{block, type='warning', echo = T}
+In the simulations performed within KARS app, no regional or country points are considered!  
+```
+
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)
 ```
 
-## Example one
+## User's options {#etoptions}
 
-## Example two
+EuroTransplant module presents in side bar the default options for kidney allocation, these default points are the same presented in table \@ref(tab:pointsET). 
+
+```{r etpoints, fig.cap="Punctuation for ET model", fig.align='left'}
+knitr::include_graphics('images/etpoints.jpg', dpi = NA)
+```
+
+Users can select different points' options to simulate kidneys' allocation and also the type of ABO compatibility imposed between donors and candidates (identical or not). Besides points attributed to HLA mismatchs it is also possibleto define the points for each month on dialysis. The check option for 'ABO identical' is no applicable to patients in the Acceptable Mismatch Program.
+
+On the main panel, users can opt to simulate kidney allocation defining the characteristics of a single donor ('**One donor**') or for a group of donors uploaded from a file ('**Multiple donors**'). In both cases, users must explicitly define how candidates' Mismatch Probability (MMP) are to be computed, if with HLA frequencies from a published [Portuguese cohort](https://www.slideshare.net/balima78/lima-2013) [@Lima2013d],  or with HLA frequencies from Ducth donors as described [here](https://www.eurotransplant.org/wp-content/uploads/2020/01/H4-Kidney.pdf).
+
+```{r etHLAfreqs, fig.cap="Options for single donor and HLA frequencies to use on MMP computation", fig.align='left'}
+knitr::include_graphics('images/etHLAfreq.jpg', dpi = NA)
+```
+
+MMP is one criteria used for candidates' final score calculation and users should select HLA frequencies from the population closer to their own donors. 
+
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```
+
+## Model simulation {#etsimulation}
+
+When selected the option **One donor**, users have to input donor's age, ABO blood type and HLA typing. As result, is presented a table with the top 10 candidates selected for this donor (candidates are selected from a [candidates' uploaded file](#users) or from the [candidates' example data](#example)).
+
+This table with the selected candidates will have not only candidates' characteristics but also ETKAS points atributted to each candidate and if they belong to Senior Program (SP) or Acceptable Mismatch Program (AM) (1 for yes / 0 for no) on the last columns.
+
+For the option **Multiple donors** and after selected **HLA frequencies origin ro compute MMP**, users just have to run the simulation:
+
+```{r etmultdonor, fig.cap="Select option and run it!!", fig.align='left'}
+knitr::include_graphics('images/etmultdonor.jpg', dpi = NA)
+```
+
+As a result will be returned a downloadable table as the above-mentioned but with recipients for all donors' kidneys. Also, a resumed table with selected donor-recipients pairs characteristics is displayed:
+
+```{r etresumed, fig.cap="Example table returned for the simulation for multiple donors", fig.align='left'}
+knitr::include_graphics('images/etresumed.jpg', dpi = NA)
+```
 
 
 ```{r fig.align='right', echo=FALSE}

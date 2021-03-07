@@ -1,0 +1,5 @@
+Level;HLA mismatch;combinations included
+1;0;0
+2;(0 DR and 0/1 B) or (1 DR and 0 B);100, 010, 110, 200, 210, 001, 101, 201
+3;(0 DR and 2 B) or (1 DR and 1 B);020, 120, 220, 011, 111, 211
+4;(1 DR and 2B) or (2 DR);021, 121, 221, 002, 102, 202, 012, 112, 212, 022, 122, 222

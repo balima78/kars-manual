@@ -1,5 +1,5 @@
 --- 
-title: "KARS user manual"
+title: "KARS users' manual"
 author: "Bruno A Lima"
 date: "updated at: `r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -7,7 +7,7 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "This is the user manula for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook."
+description: "This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook."
 ---
 
 # Preface {-}
@@ -30,7 +30,7 @@ library(png)
 knitr::include_graphics('images/heads.png', dpi = 200)
 ```
 
-KARS app is part of my PhD thesis on the PhD program in Health Data Science (HEADS) \@ref(fig:heads).
+KARS app is part of my PhD thesis on the PhD program in Health Data Science (HEADS).
 
 ```{block, type='bookm', echo = T}
 **Disclaimer:**

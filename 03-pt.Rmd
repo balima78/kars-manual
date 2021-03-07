@@ -15,6 +15,11 @@ knitr::kable(
 
 The aforementioned ordinance also impose for each available deceased donor only candidates with the donor's blood group (ABO identical) and with a negative virtual crossmatch (i.e. candidates cannot have known HLA antibodies against donor's HLA) can opt to a kidney from that donor.
 
+```{block, type='warning', echo = T}
+For each available donor, eligible candidates are those ABO identical and with a negative virtual crossmatch!
+```
+
+
 According to the ordinance 11420/2008, Hipersensitized candidates (cPRA > 85%) are prioritized and after hat ordered by their corresponding score.
 
 ```{r fig.align='right', echo=FALSE}
@@ -23,35 +28,35 @@ knitr::include_graphics('images/kars.jpg', dpi = 200)
 
 ## User's options {#ptoptions}
 
-From the KARS app (module *Portugal*) we can simulate the rules from the PT model, setting the scores as we pleased. On the sidebar panel the default punctuation (figure \@ref(fig:ptpoints)) is presented but the user can mess with it and apply new set of scores to order the list of candidates for given donor.
+From KARS app (module *Portugal*) we can simulate the rules from the PT model, setting the scores as we pleased. On sidebar panel, default punctuation (figure \@ref(fig:ptpoints)) is presented but the user can mess with it and apply new set of scores to order waiting list of candidates for a given donor.
 
-```{r ptpoints, fig.cap="Punctation for PT model", fig.align='left'}
+```{r ptpoints, fig.cap="Punctuation for PT model", fig.align='left'}
 knitr::include_graphics('images/ptpoints.jpg', dpi = NA)
 ```
 
-It is also available, on the first check, from the sidebar panel, the possibility to select candidates not necessarily ABO identical with the donor but merely ABO compatible (when the option is not checked). 
+It is also available, on first check, from sidebar panel, the possibility to select candidates not necessarily ABO identical with the donor but merely ABO compatible (when the option is not checked). 
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)
 ```
 
-## Model simulation
+## Model simulation {#ptsimulation}
 
-On the main panel of the *Portugal* module, we can run the simulation for **One donor** or for **Multiple donors**. 
+On the main panel of *Portugal* module, we can run the simulation for **One donor** or for **Multiple donors**. 
 
-When selected the option for **One donor** (figure \@ref(fig:ptonedonor)), the user can input donor's age, his blood group and his HLA typing.
+When selected option **One donor** (figure \@ref(fig:ptonedonor)), the user can input donor's age, his blood group and his HLA typing.
 
 ```{r ptonedonor, fig.cap="Donor's characteristics", fig.align='left'}
 knitr::include_graphics('images/ptonedonor.jpg', dpi = NA)
 ```
 
-According to the donor's characteristics the *top 10 selected candidates for this specific donor* are tabled. This candidates can be selected from the example data, provided with the app, or from the dataset uploaded by the user. In this last scenario the user must upload also a dataset with candidates' HLA antibodies otherwise a message is displayed:
+According to the donor's characteristics *top 10 selected candidates for this specific donor* are tabled. This candidates can be selected from the example data, provided with the app, or from a dataset uploaded by the user. In this last scenario, user must upload also a dataset with candidates' HLA antibodies otherwise a message is displayed:
 
 ```{block, type='message', echo = T}
 Please select candidates' HLA antibodies data set!
 ```
 
-When selected the option for **Multiple donors** (figure \@ref(fig:ptmultdonor)) the user just have to click on *'Select your options an run it!'* and wait for the results.
+When selected ption **Multiple donors** (figure \@ref(fig:ptmultdonor)) the user just have to click on *'Select your options an run it!'* and wait for the results.
 
 ```{r ptmultdonor, fig.cap="Donor's characteristics", fig.align='left'}
 knitr::include_graphics('images/ptmultdonor.jpg', dpi = NA)
@@ -62,7 +67,7 @@ Depending on the size of the uploaded data, the run can take several seconds.
 Be patient! 
 ```
 
-After the run, a dataset (dowloable) with the selected candidates and a table with a summary of the candidates characteristics are displayed.
+After the run, a dataset (dowloadable) with selected candidates and a table with a summary of candidates' characteristics are displayed.
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)

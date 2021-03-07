@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Upload data | KARS users’ manual</title>
+  <title>4.2 User’s options | KARS users’ manual</title>
   <meta name="description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Upload data | KARS users’ manual" />
+  <meta property="og:title" content="4.2 User’s options | KARS users’ manual" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Upload data | KARS users’ manual" />
+  <meta name="twitter:title" content="4.2 User’s options | KARS users’ manual" />
   
   <meta name="twitter:description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="intro.html"/>
-<link rel="next" href="example.html"/>
+<link rel="prev" href="etkas-points.html"/>
+<link rel="next" href="etsimulation.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -128,19 +128,39 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data" class="section level1">
-<h1><span class="header-section-number">2</span> Upload data</h1>
-<p>KARS app uses as inputs three files with demographic and immunological information of kidney transplant candidates and deceased donors.</p>
-<p>This application can be used with the provided example data, or by uploading users’ data. The available example data is simulated data for a waiting list of 500 kidney transplant candidates and for 70 potential deceased donors.</p>
+<div id="etoptions" class="section level2">
+<h2><span class="header-section-number">4.2</span> User’s options</h2>
+<p>EuroTransplant module presents in side bar the default options for kidney allocation, these default points are the same presented in table <a href="etkas-points.html#tab:pointsET">4.1</a>.</p>
+<div class="figure" style="text-align: left"><span id="fig:etpoints"></span>
+<img src="images/etpoints.jpg" alt="Punctuation for ET model"  />
+<p class="caption">
+Figure 4.2: Punctuation for ET model
+</p>
+</div>
+<p>Users can select different points’ options to simulate kidneys’ allocation and also the type of ABO compatibility imposed between donors and candidates (identical or not). Besides points attributed to HLA mismatchs it is also possibleto define the points for each month on dialysis. The check option for ‘ABO identical’ is no applicable to patients in the Acceptable Mismatch Program.</p>
+<p>On the main panel, users can opt to simulate kidney allocation defining the characteristics of a single donor (‘<strong>One donor</strong>’) or for a group of donors uploaded from a file (‘<strong>Multiple donors</strong>’). In both cases, users must explicitly define how candidates’ Mismatch Probability (MMP) are to be computed, if with HLA frequencies from a published <a href="https://www.slideshare.net/balima78/lima-2013">Portuguese cohort</a> <span class="citation">(Lima and Alves <a href="#ref-Lima2013d" role="doc-biblioref">2013</a>)</span>, or with HLA frequencies from Ducth donors as described <a href="https://www.eurotransplant.org/wp-content/uploads/2020/01/H4-Kidney.pdf">here</a>.</p>
+<div class="figure" style="text-align: left"><span id="fig:etHLAfreqs"></span>
+<img src="images/etHLAfreq.jpg" alt="Options for single donor and HLA frequencies to use on MMP computation"  />
+<p class="caption">
+Figure 4.3: Options for single donor and HLA frequencies to use on MMP computation
+</p>
+</div>
+<p>MMP is one criteria used for candidates’ final score calculation and users should select HLA frequencies from the population closer to their own donors.</p>
 <p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Lima2013d">
+<p>Lima, BA, and H Alves. 2013. “HLA Allelic and Haplotypic Diversity in Bone Marrow Volunteer Donors from Northern Portugal.” <em>Organs, Tissues &amp; Cells</em> 16: 19–26.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="example.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="etkas-points.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="etsimulation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,6 +1,6 @@
 # Lima, et al {#lima}
 
-In 2003, we proposed a KAS [@Lima2013c] based in a color prioritization of candidates in waiting list for kidney transplantation. The aim of that proposal was to define a simple and transparent set of rules that could be used as a baseline in comparison to others KAS.Also, with this color classification it would be easier to explained to patients, in a more intuitive manner, how far they are from being transplanted. 
+In 2003, we proposed a KAS [@Lima2013c] based in a color prioritization of candidates in waiting list for kidney transplantation. The aim of that proposal was to define a simple and transparent set of rules that could be used as a baseline in comparison to others KAS. Also, with this color classification it would be easier to explain to patients, in a more intuitive manner, how far they are from being transplanted. 
 
 This system of colors also takes into account the criteria of utility and justice for kidney distribution. By setting only 4 colour groups (figure \@ref(fig:colors)) on the basis of justice (time on dialysis and probability of transplantation) and, within each of these groups, candidates are ordered based by efficiency (HLA compatibilities); the proposed criteria meant to be balanced [@Lima2013c].
 
@@ -10,7 +10,7 @@ Whenever the risk of a poor transplant outcome exists and is predictable, this f
 knitr::include_graphics('images/colors.jpg', dpi = 150)
 ```
 
-With this model patients are classified according to their clinical urgency (red color), and regarding their time on dialysis and cPRA value. With a orange color are marked those patients with a cPRA > 85% or with a time on dialysis higher than the waiting list 3rd quartile. As yellow are classified the patients with a cPRA > 50% or with a time on dialysis higher than the waiting list median. And, as green are classified all the rest. Also, patients are allocated to donors within the same age group (old to old program) [@Lima2017].
+With this model patients are classified according to their clinical urgency (red color), and regarding their time on dialysis and cPRA value. With a orange color are marked those patients with a cPRA > 85% or with a time on dialysis higher than waiting time list 3rd quartile. As yellow are classified the patients with a cPRA > 50% or with a time on dialysis higher than waiting time median. And, as green are classified all the rest. Also, patients are allocated to donors within the same age group (old to old program) [@Lima2017], mimicking EuroTransplant senior program.
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)
@@ -18,9 +18,14 @@ knitr::include_graphics('images/kars.jpg', dpi = 200)
 
 ## User's options {#limaoptions}
 
+This algorithm only have 2 users' input values: values for median and 3rd quartile candidates' time on dialysis. This values can be found from relevant literature or can be computed by the users from their own data and / or knowledge. 
+
+Also, it is possible for the user to set how to consider ABO compatibility between candidates and donors, with the option '**ABO identical**'.  
+
 ```{r limaoptions, fig.cap="Values for Lima's algorithm", fig.align='left'}
-knitr::include_graphics('images/limaoptions.jpg', dpi = 150)
+knitr::include_graphics('images/limaoptions.jpg', dpi = 100)
 ```
+
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)
@@ -28,9 +33,16 @@ knitr::include_graphics('images/kars.jpg', dpi = 200)
 
 ## Model simulation
 
-On the main panel of the *Portugal* module, we can run the simulation for **One donor** or for **Multiple donors**. 
+As previously described for [Portugal](#ptsimulation) and [Eurotransplant](#etsimulation) modules,
+on the main panel of the *Lima* module, we can run the simulation for **One donor** or for **Multiple donors**. 
 
-When selected the option for **One donor** (figure \@ref(fig:ptonedonor)), the user can input donor's age, his blood group and his HLA typing.
+When selected the option for **One donor**, the user can input donor's age, his blood group and his HLA typing. When selected the **Multiple donors** the user just have to run the simulation and wait for the results. 
+
+```{r limamultdonor, fig.cap="Multiple donors option", fig.align='left'}
+knitr::include_graphics('images/limamultdonor.jpg', dpi = 150)
+```
+
+As results we will have a downloadable dataset with donor-recipientes pairs characteristics and a table with the resumed characteristics.
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)

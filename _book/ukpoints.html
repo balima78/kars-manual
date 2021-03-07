@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Upload data | KARS users’ manual</title>
+  <title>6.1 Points-based system | KARS users’ manual</title>
   <meta name="description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Upload data | KARS users’ manual" />
+  <meta property="og:title" content="6.1 Points-based system | KARS users’ manual" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Upload data | KARS users’ manual" />
+  <meta name="twitter:title" content="6.1 Points-based system | KARS users’ manual" />
   
   <meta name="twitter:description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="intro.html"/>
-<link rel="next" href="example.html"/>
+<link rel="prev" href="uk.html"/>
+<link rel="next" href="users-options.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -128,19 +128,247 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data" class="section level1">
-<h1><span class="header-section-number">2</span> Upload data</h1>
-<p>KARS app uses as inputs three files with demographic and immunological information of kidney transplant candidates and deceased donors.</p>
-<p>This application can be used with the provided example data, or by uploading users’ data. The available example data is simulated data for a waiting list of 500 kidney transplant candidates and for 70 potential deceased donors.</p>
-<p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
+<div id="ukpoints" class="section level2">
+<h2><span class="header-section-number">6.1</span> Points-based system</h2>
+<p>Transplant candidates are ordered by assigned points for each available donor. Those points are computed as the sum of 7 elements:</p>
+<ol style="list-style-type: decimal">
+<li><a href="ukpoints.html#ms">Matchability</a></li>
+<li><a href="ukpoints.html#tod">Time on dialysis</a></li>
+<li><a href="ukpoints.html#dric">Donor-recipient risk index combinations</a></li>
+<li><a href="ukpoints.html#HLAage">HLA match and age combined</a></li>
+<li><a href="ukpoints.html#agediff">Donor-recipient age difference</a></li>
+<li><a href="ukpoints.html#HLAtotal">Total HLA mismatch</a></li>
+<li><a href="ukpoints.html#blood">Blood group match</a></li>
+</ol>
+<div id="ms" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Matchability</h3>
+<p>Points for matchability are calculated from the formula: <span class="math inline">\(10 \cdot (1 + (MatchScore / 4.5)^{4.7})\)</span>, where <span class="math inline">\(MatchScore\)</span> (MS) take values <span class="math inline">\(1\)</span> trough <span class="math inline">\(10\)</span> corresponding to candidates’ percentil on waiting list when computed the number of donors ABO identical and HLA compatible for each candidate.</p>
+<div class="warning">
+<p>
+In the <a href="example.html#example">example data</a> provided on KARS app, <span class="math inline"><span class="math inline">\(MS\)</span></span> were assigned randomly with a probability of 0.03 for <span class="math inline"><span class="math inline">\(MS = 10\)</span></span>.
+</p>
+</div>
+</div>
+<div id="tod" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> Time on dialysis</h3>
+<p>For each day on dialysis, 1 point is given to transplant candidates, meaning that for each month, 30 points are assigned to candidates. As described for <a href="example.html#example">example data</a>, time on dialysis must be in months.</p>
+<div class="warning">
+<p>
+Time on dialysis (column <em>dialysis</em>) must be in months!
+</p>
+<p>
+In order to maintain congruence between the criteria used in the different app allocation systems, uploaded time on dialysis must be in months.
+</p>
+</div>
+</div>
+<div id="dric" class="section level3">
+<h3><span class="header-section-number">6.1.3</span> Donor-recipient risk index combinations</h3>
+<p>As described in the <a href="example.html#example">example data</a> candidates’ dataset have a column for recipient risk index (<strong>RRI</strong>) and donors’ dataset have a column for donor risk index (<strong>DRI</strong>). Also, <a href="users.html#users">user’s data</a> must have these columns. Both RRI and DRI can have 4 categories, R1 to R4 and D1 to D4, respectively.</p>
+<p>Computation of recipients and donors’ categories are described on <a href="https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/16915/kidney-allocation-policy-pol186.pdf">UK National Health Sistem policy</a>.</p>
+<p>Points are defined as:</p>
+<table>
+<caption>
+<span id="tab:dric">Table 6.1: </span>Donor-Recipient risk index combinations.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+R1
+</th>
+<th style="text-align:right;">
+R2
+</th>
+<th style="text-align:right;">
+R3
+</th>
+<th style="text-align:right;">
+R4
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+D1
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:right;">
+350
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+D2
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:right;">
+500
+</td>
+<td style="text-align:right;">
+350
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+D3
+</td>
+<td style="text-align:right;">
+350
+</td>
+<td style="text-align:right;">
+500
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:right;">
+700
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+D4
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+350
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:right;">
+1000
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="HLAage" class="section level3">
+<h3><span class="header-section-number">6.1.4</span> HLA match and age combined</h3>
+<p>For HLA match and age combined, first we must define HLA mismatch levels for HLA-A, -B and -DR for each donor-recipient pair:</p>
+<table>
+<caption>
+<span id="tab:hlamm">Table 6.2: </span>HLA mismatch levels for HLA-A, -B and -DR
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Level
+</th>
+<th style="text-align:left;">
+HLA mismatch
+</th>
+<th style="text-align:left;">
+combinations included
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+(0 DR and 0/1 B) or (1 DR and 0 B)
+</td>
+<td style="text-align:left;">
+100, 010, 110, 200, 210, 001, 101, 201
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+(0 DR and 2 B) or (1 DR and 1 B)
+</td>
+<td style="text-align:left;">
+020, 120, 220, 011, 111, 211
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+(1 DR and 2B) or (2 DR)
+</td>
+<td style="text-align:left;">
+021, 121, 221, 002, 102, 202, 012, 112, 212, 022, 122, 222
+</td>
+</tr>
+</tbody>
+</table>
+<p>Afterwards, candidates’ points are defined according to each level:</p>
+<ul>
+<li>Level 1 = <span class="math inline">\(1200 \cdot \cos(age/18) + 2300\)</span></li>
+<li>Level 2 = <span class="math inline">\(750 \cdot \cos(age/18) + 1500\)</span></li>
+<li>Level 3+4 = <span class="math inline">\(400 \cdot \sin(age/50\)</span></li>
+</ul>
+</div>
+<div id="agediff" class="section level3">
+<h3><span class="header-section-number">6.1.5</span> Donor-recipient age difference</h3>
+<p>Points for age difference between the donor and the transplant candidates are given for:</p>
+<p><span class="math inline">\(\frac{1}{2} \cdot(\)</span>donor-candidate age difference<span class="math inline">\()^2\)</span></p>
+</div>
+<div id="HLAtotal" class="section level3">
+<h3><span class="header-section-number">6.1.6</span> Total HLA mismatch</h3>
+<p>Points for total mismatch between donor and candidates are calculated based on the number of mismatchs at HLA-A, -B and -DR:</p>
+<ul>
+<li>total HLA mismatch = 0: 0 points;</li>
+<li>total HLA mismatch = 1: -100 points;</li>
+<li>total HLA mismatch = 2-3: -150 points;</li>
+<li>total HLA mismatch = 4-6: -250 points.</li>
+</ul>
+<div class="warning">
+<p>
+Originally, UK policy total mismatch score is calculated based on the number of mismatchs at HLA-A, -B, -Cw, -DR and -DQ.
+</p>
+<p>
+In KARS app, since only data on HLA-A, -B and -DR are used, total mismatch score is calculated only on these 3 loci.
+</p>
+</div>
+</div>
+<div id="blood" class="section level3">
+<h3><span class="header-section-number">6.1.7</span> Blood group match</h3>
+<p>Within <strong>TIER B</strong> candidates and for O blood group donors, a thousand points are substracted to those candidates (-1000 points).</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="example.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="uk.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="users-options.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

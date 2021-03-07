@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Upload data | KARS users’ manual</title>
+  <title>3.2 Model simulation | KARS users’ manual</title>
   <meta name="description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Upload data | KARS users’ manual" />
+  <meta property="og:title" content="3.2 Model simulation | KARS users’ manual" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Upload data | KARS users’ manual" />
+  <meta name="twitter:title" content="3.2 Model simulation | KARS users’ manual" />
   
   <meta name="twitter:description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="intro.html"/>
-<link rel="next" href="example.html"/>
+<link rel="prev" href="ptoptions.html"/>
+<link rel="next" href="et.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -128,19 +128,46 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data" class="section level1">
-<h1><span class="header-section-number">2</span> Upload data</h1>
-<p>KARS app uses as inputs three files with demographic and immunological information of kidney transplant candidates and deceased donors.</p>
-<p>This application can be used with the provided example data, or by uploading users’ data. The available example data is simulated data for a waiting list of 500 kidney transplant candidates and for 70 potential deceased donors.</p>
-<p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
+<div id="ptsimulation" class="section level2">
+<h2><span class="header-section-number">3.2</span> Model simulation</h2>
+<p>On the main panel of <em>Portugal</em> module, we can run the simulation for <strong>One donor</strong> or for <strong>Multiple donors</strong>.</p>
+<p>When selected option <strong>One donor</strong> (figure <a href="ptsimulation.html#fig:ptonedonor">3.2</a>), the user can input donor’s age, his blood group and his HLA typing.</p>
+<div class="figure" style="text-align: left"><span id="fig:ptonedonor"></span>
+<img src="images/ptonedonor.jpg" alt="Donor's characteristics"  />
+<p class="caption">
+Figure 3.2: Donor’s characteristics
+</p>
 </div>
+<p>According to the donor’s characteristics <em>top 10 selected candidates for this specific donor</em> are tabled. This candidates can be selected from the example data, provided with the app, or from a dataset uploaded by the user. In this last scenario, user must upload also a dataset with candidates’ HLA antibodies otherwise a message is displayed:</p>
+<div class="message">
+<p>
+Please select candidates’ HLA antibodies data set!
+</p>
+</div>
+<p>When selected ption <strong>Multiple donors</strong> (figure <a href="ptsimulation.html#fig:ptmultdonor">3.3</a>) the user just have to click on <em>‘Select your options an run it!’</em> and wait for the results.</p>
+<div class="figure" style="text-align: left"><span id="fig:ptmultdonor"></span>
+<img src="images/ptmultdonor.jpg" alt="Donor's characteristics"  />
+<p class="caption">
+Figure 3.3: Donor’s characteristics
+</p>
+</div>
+<div class="warning">
+<p>
+Depending on the size of the uploaded data, the run can take several seconds. Be patient!
+</p>
+</div>
+<p>After the run, a dataset (dowloadable) with selected candidates and a table with a summary of candidates’ characteristics are displayed.</p>
+<p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
+
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="example.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ptoptions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="et.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

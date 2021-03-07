@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Upload data | KARS users’ manual</title>
+  <title>4.3 Model simulation | KARS users’ manual</title>
   <meta name="description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Upload data | KARS users’ manual" />
+  <meta property="og:title" content="4.3 Model simulation | KARS users’ manual" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Upload data | KARS users’ manual" />
+  <meta name="twitter:title" content="4.3 Model simulation | KARS users’ manual" />
   
   <meta name="twitter:description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="intro.html"/>
-<link rel="next" href="example.html"/>
+<link rel="prev" href="etoptions.html"/>
+<link rel="next" href="lima.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -128,19 +128,35 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data" class="section level1">
-<h1><span class="header-section-number">2</span> Upload data</h1>
-<p>KARS app uses as inputs three files with demographic and immunological information of kidney transplant candidates and deceased donors.</p>
-<p>This application can be used with the provided example data, or by uploading users’ data. The available example data is simulated data for a waiting list of 500 kidney transplant candidates and for 70 potential deceased donors.</p>
-<p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
+<div id="etsimulation" class="section level2">
+<h2><span class="header-section-number">4.3</span> Model simulation</h2>
+<p>When selected the option <strong>One donor</strong>, users have to input donor’s age, ABO blood type and HLA typing. As result, is presented a table with the top 10 candidates selected for this donor (candidates are selected from a <a href="users.html#users">candidates’ uploaded file</a> or from the <a href="example.html#example">candidates’ example data</a>).</p>
+<p>This table with the selected candidates will have not only candidates’ characteristics but also ETKAS points atributted to each candidate and if they belong to Senior Program (SP) or Acceptable Mismatch Program (AM) (1 for yes / 0 for no) on the last columns.</p>
+<p>For the option <strong>Multiple donors</strong> and after selected <strong>HLA frequencies origin ro compute MMP</strong>, users just have to run the simulation:</p>
+<div class="figure" style="text-align: left"><span id="fig:etmultdonor"></span>
+<img src="images/etmultdonor.jpg" alt="Select option and run it!!"  />
+<p class="caption">
+Figure 4.4: Select option and run it!!
+</p>
 </div>
+<p>As a result will be returned a downloadable table as the above-mentioned but with recipients for all donors’ kidneys. Also, a resumed table with selected donor-recipients pairs characteristics is displayed:</p>
+<div class="figure" style="text-align: left"><span id="fig:etresumed"></span>
+<img src="images/etresumed.jpg" alt="Example table returned for the simulation for multiple donors"  />
+<p class="caption">
+Figure 4.5: Example table returned for the simulation for multiple donors
+</p>
+</div>
+<p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
+
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="example.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="etoptions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lima.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -4,35 +4,34 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.1 User’s options | KARS user manual</title>
-  <meta name="description" content="This is the user manula for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
+  <title>6.2 Users’ options | KARS users’ manual</title>
+  <meta name="description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.1 User’s options | KARS user manual" />
+  <meta property="og:title" content="6.2 Users’ options | KARS users’ manual" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is the user manula for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
+  <meta property="og:description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.1 User’s options | KARS user manual" />
+  <meta name="twitter:title" content="6.2 Users’ options | KARS users’ manual" />
   
-  <meta name="twitter:description" content="This is the user manula for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
+  <meta name="twitter:description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   
 
 <meta name="author" content="Bruno A Lima" />
 
 
-<meta name="date" content="2020-12-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="pt.html"/>
-<link rel="next" href="et.html"/>
+<link rel="prev" href="ukpoints.html"/>
+<link rel="next" href="model-simulation-1.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,6 +51,10 @@
 
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
 
 
 
@@ -68,7 +71,7 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">KARS user manual</a></li>
+<li><a href="./">KARS users' manual</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
@@ -78,18 +81,35 @@
 <li class="chapter" data-level="2.2" data-path="users.html"><a href="users.html"><i class="fa fa-check"></i><b>2.2</b> User’s data</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="pt.html"><a href="pt.html"><i class="fa fa-check"></i><b>3</b> Portugal</a><ul>
-<li class="chapter" data-level="3.1" data-path="users-options.html"><a href="users-options.html"><i class="fa fa-check"></i><b>3.1</b> User’s options</a></li>
+<li class="chapter" data-level="3.1" data-path="ptoptions.html"><a href="ptoptions.html"><i class="fa fa-check"></i><b>3.1</b> User’s options</a></li>
+<li class="chapter" data-level="3.2" data-path="ptsimulation.html"><a href="ptsimulation.html"><i class="fa fa-check"></i><b>3.2</b> Model simulation</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="et.html"><a href="et.html"><i class="fa fa-check"></i><b>4</b> EuroTransplant</a><ul>
-<li class="chapter" data-level="4.1" data-path="example-one.html"><a href="example-one.html"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
-<li class="chapter" data-level="4.2" data-path="example-two.html"><a href="example-two.html"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
+<li class="chapter" data-level="4.1" data-path="etkas-points.html"><a href="etkas-points.html"><i class="fa fa-check"></i><b>4.1</b> ETKAS points</a></li>
+<li class="chapter" data-level="4.2" data-path="etoptions.html"><a href="etoptions.html"><i class="fa fa-check"></i><b>4.2</b> User’s options</a></li>
+<li class="chapter" data-level="4.3" data-path="etsimulation.html"><a href="etsimulation.html"><i class="fa fa-check"></i><b>4.3</b> Model simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="lima.html"><a href="lima.html"><i class="fa fa-check"></i><b>5</b> Lima, et al</a></li>
-<li class="chapter" data-level="6" data-path="uk.html"><a href="uk.html"><i class="fa fa-check"></i><b>6</b> UK transplant</a></li>
+<li class="chapter" data-level="5" data-path="lima.html"><a href="lima.html"><i class="fa fa-check"></i><b>5</b> Lima, et al</a><ul>
+<li class="chapter" data-level="5.1" data-path="limaoptions.html"><a href="limaoptions.html"><i class="fa fa-check"></i><b>5.1</b> User’s options</a></li>
+<li class="chapter" data-level="5.2" data-path="model-simulation.html"><a href="model-simulation.html"><i class="fa fa-check"></i><b>5.2</b> Model simulation</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="uk.html"><a href="uk.html"><i class="fa fa-check"></i><b>6</b> UK transplant</a><ul>
+<li class="chapter" data-level="6.1" data-path="ukpoints.html"><a href="ukpoints.html"><i class="fa fa-check"></i><b>6.1</b> Points-based system</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="ukpoints.html"><a href="ukpoints.html#ms"><i class="fa fa-check"></i><b>6.1.1</b> Matchability</a></li>
+<li class="chapter" data-level="6.1.2" data-path="ukpoints.html"><a href="ukpoints.html#tod"><i class="fa fa-check"></i><b>6.1.2</b> Time on dialysis</a></li>
+<li class="chapter" data-level="6.1.3" data-path="ukpoints.html"><a href="ukpoints.html#dric"><i class="fa fa-check"></i><b>6.1.3</b> Donor-recipient risk index combinations</a></li>
+<li class="chapter" data-level="6.1.4" data-path="ukpoints.html"><a href="ukpoints.html#HLAage"><i class="fa fa-check"></i><b>6.1.4</b> HLA match and age combined</a></li>
+<li class="chapter" data-level="6.1.5" data-path="ukpoints.html"><a href="ukpoints.html#agediff"><i class="fa fa-check"></i><b>6.1.5</b> Donor-recipient age difference</a></li>
+<li class="chapter" data-level="6.1.6" data-path="ukpoints.html"><a href="ukpoints.html#HLAtotal"><i class="fa fa-check"></i><b>6.1.6</b> Total HLA mismatch</a></li>
+<li class="chapter" data-level="6.1.7" data-path="ukpoints.html"><a href="ukpoints.html#blood"><i class="fa fa-check"></i><b>6.1.7</b> Blood group match</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="users-options.html"><a href="users-options.html"><i class="fa fa-check"></i><b>6.2</b> Users’ options</a></li>
+<li class="chapter" data-level="6.3" data-path="model-simulation-1.html"><a href="model-simulation-1.html"><i class="fa fa-check"></i><b>6.3</b> Model simulation</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusions</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://bioestatisticas.wixsite.com/bioestatisticas" target="blank">Powered by 'Oficina de BioEstatística'</a></li>
 
 </ul>
 
@@ -100,7 +120,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">KARS user manual</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">KARS users’ manual</a>
           </h1>
         </div>
 
@@ -109,26 +129,52 @@
 
             <section class="normal" id="section-">
 <div id="users-options" class="section level2">
-<h2><span class="header-section-number">3.1</span> User’s options</h2>
-<p>From the KARS app (module <em>Portugal</em>) we can simulate the rules from the PT model setting the score as we pleased. On the sidebar panel the default punctuation (figure <a href="users-options.html#fig:ptpoints">3.1</a>) is presented but the user can mess with it and apply new set of scores to the list of candidates.</p>
-<div class="figure" style="text-align: left"><span id="fig:ptpoints"></span>
-<img src="images/ptpoints.jpg" alt="Punctation for PT model"  />
+<h2><span class="header-section-number">6.2</span> Users’ options</h2>
+<p>UK transplant algorithm depends on the points assigned for the <a href="ukpoints.html#ukpoints">7 elements</a> described earlier and for 5 of these elements, points can be redefined by KARS app’s users on the sidebar panel on ‘UK transplant’ module.</p>
+<p>Users can define the points to each day on dialysis:</p>
+<div class="figure" style="text-align: left"><span id="fig:uktod"></span>
+<img src="images/uktod.jpg" alt="Points per day on dialysis"  />
 <p class="caption">
-Figure 3.1: Punctation for PT model
+Figure 6.2: Points per day on dialysis
 </p>
 </div>
-<p>It is also available, on the first check, from the sidebar panel, the possibility to select candidates not necessarily ABO identical with the donor but merely ABO compatible (when the option is not checked).</p>
-<p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
-
+<p>For the criteria <a href="ukpoints.html#HLAage">HLA match and age combined</a>, users can input coefficient values on the equation for the 3 HLA levels between donor and candidates:</p>
+<div class="figure" style="text-align: left"><span id="fig:ukhlaage"></span>
+<img src="images/ukhlaage.jpg" alt="Points for HLA match and age combined"  />
+<p class="caption">
+Figure 6.3: Points for HLA match and age combined
+</p>
 </div>
-<!-- </div> -->
+<p>Points for candidates’ <a href="ukpoints.html#ms">matchability</a> can be adjusted by the parameters ‘m’, ‘n’ and ‘o’ on the equation, the plot shows how theses parameters influence attributed points:</p>
+<div class="figure" style="text-align: left"><span id="fig:ukmatch"></span>
+<img src="images/ukmatch.jpg" alt="Points for matchability"  />
+<p class="caption">
+Figure 6.4: Points for matchability
+</p>
+</div>
+<p>Penalizations on <a href="ukpoints.html#HLAtotal">total HLA mismatch</a> can also be defined by the users:</p>
+<div class="figure" style="text-align: left"><span id="fig:uktotalhla"></span>
+<img src="images/uktotalhla.jpg" alt="Total HLA mismatch penalization"  />
+<p class="caption">
+Figure 6.5: Total HLA mismatch penalization
+</p>
+</div>
+<p>Finally, users can define for how much blood group B candidates should be penalize when the available donor is group O:</p>
+<div class="figure" style="text-align: left"><span id="fig:ukblood"></span>
+<img src="images/ukblood.jpg" alt="Blood group penalization"  />
+<p class="caption">
+Figure 6.6: Blood group penalization
+</p>
+</div>
+<p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="pt.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="et.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ukpoints.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="model-simulation-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -178,6 +224,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
