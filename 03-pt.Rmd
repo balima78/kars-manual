@@ -1,6 +1,6 @@
 # Portugal {#pt}
 
-Portuguese rules on allocation of kidneys from deceased donors (PT model) were published on ordinance 6357/2007 and are based on a scoring system (table \@ref(tab:ord6357)) that takes in consideration: HLA mismatches between donor and transplant candidate; level o immunization of the candidate; time on dialysis; an age difference between donor and recipient.
+Portuguese rules on allocation of kidneys from deceased donors (PT model) were published on ordinance 6357/2007 and are based on a scoring system (table \@ref(tab:ord6357)) that takes in consideration: HLA mismatches between donor and transplant candidate; level o immunization of the candidate; time on dialysis; an age difference between donor and transplant candidate.
 
 ```{r ord6357, tidy=FALSE}
 options(knitr.kable.NA = '')
@@ -13,10 +13,10 @@ knitr::kable(
 ) %>%  footnote(general = "* Mismatches for HLA-A locus are used to break punctual ties")
 ```
 
-The aforementioned ordinance also impose for each available deceased donor only candidates with the donor's blood group (ABO identical) and with a negative virtual crossmatch (i.e. candidates cannot have known HLA antibodies against donor's HLA) can opt to a kidney from that donor.
+The aforementioned ordinance also impose for each available deceased donor only candidates with the same donor's blood group (**ABO identical**) and with a **negative virtual crossmatch** (i.e. candidates cannot have known HLA antibodies against donor's HLA) can opt to a kidney from that donor.
 
 ```{block, type='warning', echo = T}
-For each available donor, eligible candidates are those ABO identical and with a negative virtual crossmatch!
+For each available donor, eligible candidates are those **ABO identical** and with a **negative virtual crossmatch**!
 ```
 
 
@@ -28,7 +28,7 @@ knitr::include_graphics('images/kars.jpg', dpi = 200)
 
 ## User's options {#ptoptions}
 
-From KARS app (module *Portugal*) we can simulate the rules from the PT model, setting the scores as we pleased. On sidebar panel, default punctuation (figure \@ref(fig:ptpoints)) is presented but the user can mess with it and apply new set of scores to order waiting list of candidates for a given donor.
+From KARS app (module *Portugal*) we can simulate the rules from the PT model, setting the scores as we pleased. On sidebar panel, default punctuation (figure \@ref(fig:ptpoints)) is presented but users can mess with it and apply new set of scores to reorder candidates in waiting listfor a given donor.
 
 ```{r ptpoints, fig.cap="Punctuation for PT model", fig.align='left'}
 knitr::include_graphics('images/ptpoints.jpg', dpi = NA)
@@ -56,14 +56,15 @@ According to the donor's characteristics *top 10 selected candidates for this sp
 Please select candidates' HLA antibodies data set!
 ```
 
-When selected ption **Multiple donors** (figure \@ref(fig:ptmultdonor)) the user just have to click on *'Select your options an run it!'* and wait for the results.
+When selected option **Multiple donors** (figure \@ref(fig:ptmultdonor)) the user just have to click on *'Select your options an run it!'* and wait for the results.
 
 ```{r ptmultdonor, fig.cap="Donor's characteristics", fig.align='left'}
 knitr::include_graphics('images/ptmultdonor.jpg', dpi = NA)
 ```
 
 ```{block, type='warning', echo = T}
-Depending on the size of the uploaded data, the run can take several seconds. 
+Depending on the size of uploaded data, the run can take several seconds.
+
 Be patient! 
 ```
 

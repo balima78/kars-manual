@@ -74,7 +74,13 @@
 <li><a href="./">KARS users' manual</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#citing-this-work"><i class="fa fa-check"></i>Citing this work</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributing"><i class="fa fa-check"></i>Contributing</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
+</ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Upload data</a><ul>
 <li class="chapter" data-level="2.1" data-path="example.html"><a href="example.html"><i class="fa fa-check"></i><b>2.1</b> Example data</a></li>
@@ -144,7 +150,7 @@ Candidates column names are not identical to example data!
 </p>
 </div>
 <p>Also, users must be aware if he/she want to use UK transplant algorithm. In this case option ‘<em>UK</em>’ must be selected and files must have extra columns described in table <a href="example.html#tab:candidates">2.1</a> and table <a href="example.html#tab:donors">2.3</a>.</p>
-<p>In ARS app users can upload a .txt or .csv file specifying ‘File’s delimiter’ from available options:</p>
+<p>In KARS app, users can upload a .txt or .csv file specifying ‘File’s delimiter’ from available options:</p>
 <div class="figure" style="text-align: left"><span id="fig:delimiter"></span>
 <img src="images/delimiter.jpg" alt="'Files delimiter' options" width="367" />
 <p class="caption">
@@ -153,14 +159,14 @@ Figure 2.2: ‘Files delimiter’ options
 </div>
 <p>Those files must have the same exact header (case sensitive) as the ones from <a href="example.html#example">example data</a>.</p>
 <p>For <em>bg</em> field (both for candidates and donors) the valid options are: A, AB, B and O.</p>
-<p>The HLA typing for <em>HLA-A, -B</em> and <em>–DRB1</em> loci must have a consistent resolution level for HLA-antibodies identified in the second dataset, as well, with HLA typing of potential deceased donors. For instance, if HLA typing for candidates is in serological resolution so donor’s typing and identified HLA antibodies must be in serological resolution. In like manner, for a genotyping resolution all HLA must be consistent. When alleles have a 0 on the left (meaning A01 or DR04) it can be omitted only if this always the case as we do in our example data. By the same token, on our example data, if donors have the values <strong>1</strong> and <strong>4</strong> for columns <em>DR1</em> and <em>DR2</em>, so the correspondent HLA antibodies in the second dataset (table <a href="example.html#tab:donors">2.3</a>) will be <strong>DR1</strong> and <strong>DR4</strong>, respectively.</p>
+<p>The HLA typing for <em>HLA-A, -B</em> and <em>–DRB1</em> loci must have a consistent resolution level for HLA-antibodies identified in the second dataset, as well, with HLA typing of potential deceased donors. For instance, if HLA typing for candidates is in serological resolution so donor’s typing and identified HLA antibodies must be in serological resolution too. In like manner, for a genotyping resolution all HLA must be consistent. When alleles have a 0 on the left (meaning A01 or DR04) it can be omitted only if this is always the case, as we do in our example data. By the same token, on our example data, if donors have the values <strong>1</strong> and <strong>4</strong> for columns <em>DR1</em> and <em>DR2</em>, so the correspondent HLA antibodies in the second dataset (table <a href="example.html#tab:donors">2.3</a>) will be <strong>DR1</strong> and <strong>DR4</strong>, respectively.</p>
 <div class="warning">
 <p>
 In order to avoid problems with blanks on HLA typing, candidates and / or donors must be considered homozigous and the alleles must be repeated (as an example: instead of <em>B15,-</em> consider <em>B15,15</em>)
 </p>
 </div>
-<p>For candidates’ dataset we recommend a sample size no longer than 2000 and for donors’ dataset a ratio of 1 to 7 candidates. Meaning, for 700 candidates use at most 100 donors.</p>
-<p>This ratio is suggested as guarantee that selected candidates for each KAS are comparable and we can spot differences due to KAS rules. As each donor is allocated to two candidates, with a number of donors close to half the number of candidates we will have almost all candidates selected for all KAS.</p>
+<p>For candidates’ dataset we recommend a sample size no longer than 2000 and for donors’ dataset a ratio of 1 / 7 candidates. Meaning, for 700 candidates use at most 100 donors.</p>
+<p>This ratio is suggested as guarantee that selected candidates for each KAS are comparable and we can spot differences due to KAS rules. As each donor is allocated to two candidates, with a number of donors close to half the number of candidates, we would have almost all candidates selected for all KAS simulations.</p>
 <p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
 
 </div>

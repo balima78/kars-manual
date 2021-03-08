@@ -74,7 +74,13 @@
 <li><a href="./">KARS users' manual</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#citing-this-work"><i class="fa fa-check"></i>Citing this work</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributing"><i class="fa fa-check"></i>Contributing</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
+</ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Upload data</a><ul>
 <li class="chapter" data-level="2.1" data-path="example.html"><a href="example.html"><i class="fa fa-check"></i><b>2.1</b> Example data</a></li>
@@ -130,12 +136,12 @@
             <section class="normal" id="section-">
 <div id="uk" class="section level1">
 <h1><span class="header-section-number">6</span> UK transplant</h1>
-<p>United Kingdom (UK) deceased donor kidney allocation for transplantation is firstly based on de definition of two ranked Tiers of candidates eligible for the donor.</p>
-<p>The UK transplant module on KARS app simulates the allocation of kidneys to a candidates’ waiting list to kidney-only transplantes and do not take in consideration geographical criteria. Thealgorithm aplied in KARS app is a simplification of the <a href="https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/16915/kidney-allocation-policy-pol186.pdf">UK National Health Sistem policy</a>.</p>
-<p>For each available donor, eligible candidates are those with a negative virtual crossmatch and ABO compatible with the donor. These candidates are them grouped in to TIERS:</p>
+<p>United Kingdom (UK) deceased donor kidney allocation for transplantation is firstly based on the definition of two ranked Tiers of candidates eligible for the donor.</p>
+<p>The UK transplant module on KARS app simulates the allocation of kidneys to a candidates’ waiting list for kidney-only transplants and do not take in consideration geographical criteria. The algorithm applied in KARS app is a simplification of the <a href="https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/16915/kidney-allocation-policy-pol186.pdf">UK National Health Sistem policy</a>.</p>
+<p>For each available donor, <strong>eligible candidates</strong> are those with a <strong>negative virtual crossmatch</strong> and <strong>ABO compatible</strong> with the donor. These candidates are them grouped in two TIERS:</p>
 <div class="figure" style="text-align: left"><span id="fig:UKtiersflow"></span>
-<div id="htmlwidget-f918c91cec5a6c9216ee" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f918c91cec5a6c9216ee">{"x":{"diagram":"\ndigraph ETgraph {\n\ngraph [layout = dot]\n\n# node definitions with substituted label text\nnode [shape = rectangle, width = 4, fillcolor = Biege]\na [label = \"TIER A: patients with match score = 10 OR cPRA = 100% OR time on dialysis > 7 years\"]\nb [label = \"TIER B: all other eligible patients\"]\n\na -> b\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-91a5bfd87e40735c357e" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-91a5bfd87e40735c357e">{"x":{"diagram":"\ndigraph ETgraph {\n\ngraph [layout = dot]\n\n# node definitions with substituted label text\nnode [shape = rectangle, width = 4, fillcolor = Biege]\na [label = \"TIER A: patients with match score = 10 OR cPRA = 100% OR time on dialysis > 7 years\"]\nb [label = \"TIER B: all other eligible patients\"]\n\na -> b\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 6.1: Ranked Tiers
 </p>

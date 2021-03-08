@@ -70,13 +70,13 @@ knitr::include_graphics('images/kars.jpg', dpi = 200)
 
 ## User's options {#etoptions}
 
-EuroTransplant module presents in side bar the default options for kidney allocation, these default points are the same presented in table \@ref(tab:pointsET). 
+EuroTransplant module presents default options, in side bar, for kidney allocation, these default points are the same presented in table \@ref(tab:pointsET). 
 
 ```{r etpoints, fig.cap="Punctuation for ET model", fig.align='left'}
 knitr::include_graphics('images/etpoints.jpg', dpi = NA)
 ```
 
-Users can select different points' options to simulate kidneys' allocation and also the type of ABO compatibility imposed between donors and candidates (identical or not). Besides points attributed to HLA mismatchs it is also possibleto define the points for each month on dialysis. The check option for 'ABO identical' is no applicable to patients in the Acceptable Mismatch Program.
+Users can select different points' options to simulate kidneys' allocation and also the type of ABO compatibility imposed between donors and candidates (identical or not). Besides points attributed to HLA mismatchs, it is also possible to define the points for each month on dialysis. The check option for 'ABO identical' is no applicable to patients in the Acceptable Mismatch Program.
 
 On the main panel, users can opt to simulate kidney allocation defining the characteristics of a single donor ('**One donor**') or for a group of donors uploaded from a file ('**Multiple donors**'). In both cases, users must explicitly define how candidates' Mismatch Probability (MMP) are to be computed, if with HLA frequencies from a published [Portuguese cohort](https://www.slideshare.net/balima78/lima-2013) [@Lima2013d],  or with HLA frequencies from Ducth donors as described [here](https://www.eurotransplant.org/wp-content/uploads/2020/01/H4-Kidney.pdf).
 
@@ -95,9 +95,9 @@ knitr::include_graphics('images/kars.jpg', dpi = 200)
 
 When selected the option **One donor**, users have to input donor's age, ABO blood type and HLA typing. As result, is presented a table with the top 10 candidates selected for this donor (candidates are selected from a [candidates' uploaded file](#users) or from the [candidates' example data](#example)).
 
-This table with the selected candidates will have not only candidates' characteristics but also ETKAS points atributted to each candidate and if they belong to Senior Program (SP) or Acceptable Mismatch Program (AM) (1 for yes / 0 for no) on the last columns.
+This table with the selected candidates will have not only candidates' characteristics but also ETKAS points atributted to each candidate and if they belong to Senior Program (SP) or Acceptable Mismatch Program (AM) (1 for yes / 0 for no), on the last columns.
 
-For the option **Multiple donors** and after selected **HLA frequencies origin ro compute MMP**, users just have to run the simulation:
+For the option **Multiple donors** and after selected **HLA frequencies origin, to compute MMP**, users just have to run the simulation:
 
 ```{r etmultdonor, fig.cap="Select option and run it!!", fig.align='left'}
 knitr::include_graphics('images/etmultdonor.jpg', dpi = NA)

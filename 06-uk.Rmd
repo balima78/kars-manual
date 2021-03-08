@@ -1,10 +1,10 @@
 # UK transplant {#uk}
 
-United Kingdom (UK) deceased donor kidney allocation for transplantation is firstly based on de definition of two ranked Tiers of candidates eligible for the donor.
+United Kingdom (UK) deceased donor kidney allocation for transplantation is firstly based on the definition of two ranked Tiers of candidates eligible for the donor.
 
-The UK transplant module on KARS app simulates the allocation of kidneys to a candidates' waiting list to kidney-only transplantes and do not take in consideration geographical criteria. Thealgorithm aplied in KARS app is a simplification of the [UK National Health Sistem policy](https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/16915/kidney-allocation-policy-pol186.pdf). 
+The UK transplant module on KARS app simulates the allocation of kidneys to a candidates' waiting list for kidney-only transplants and do not take in consideration geographical criteria. The algorithm applied in KARS app is a simplification of the [UK National Health Sistem policy](https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/16915/kidney-allocation-policy-pol186.pdf). 
 
-For each available donor, eligible candidates are those with a negative virtual crossmatch and ABO compatible with the donor. These candidates are them grouped in to TIERS:
+For each available donor, **eligible candidates** are those with a **negative virtual crossmatch** and **ABO compatible** with the donor. These candidates are them grouped in two TIERS:
 
 ```{r UKtiersflow, fig.cap="Ranked Tiers", fig.align='left'}
 library(DiagrammeR)
@@ -63,7 +63,7 @@ In the [example data](#example) provided on KARS app, $MS$ were assigned randoml
 
 ### Time on dialysis {#tod}
 
-For each day on dialysis, 1 point is given to transplant candidates, meaning that for each month, 30 points are assigned to candidates. As described for [example data](#example), time on dialysis must be in months.
+For each day on dialysis, 1 point is given to transplant candidates, meaning that for each month on dialysis, 30 points are assigned to candidates. As described for [example data](#example), time on dialysis must be in months.
 
 ```{block, type='warning', echo = T}
 Time on dialysis (column *dialysis*) must be in months!
@@ -73,7 +73,7 @@ In order to maintain congruence between the criteria used in the different app a
 
 ### Donor-recipient risk index combinations {#dric}
 
-As described in the [example data](#example) candidates' dataset have a column for recipient risk index (**RRI**) and donors' dataset have a column for donor risk index (**DRI**). Also, [user's data](#users) must have these columns. Both RRI and DRI can have 4 categories, R1 to R4 and D1 to D4, respectively.
+As described in the [example data](#example), candidates' dataset have a column for recipient risk index (**RRI**) and donors' dataset have a column for donor risk index (**DRI**). Also, [user's data](#users) must have these columns. Both RRI and DRI can have 4 categories, R1 to R4 and D1 to D4, respectively.
 
 Computation of recipients and donors' categories are described on [UK National Health Sistem policy](https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/16915/kidney-allocation-policy-pol186.pdf). 
 
@@ -109,7 +109,7 @@ Afterwards, candidates' points are defined according to each level:
 
 - Level 1 =   $1200 \cdot \cos(age/18) + 2300$
 - Level 2 =   $750 \cdot \cos(age/18) + 1500$
-- Level 3+4 = $400 \cdot \sin(age/50$
+- Level 3+4 = $400 \cdot \sin(age/50)$
 
 ### Donor-recipient age difference {#agediff}
 
@@ -139,7 +139,7 @@ Within **TIER B** candidates and for O blood group donors, a thousand points are
 
 ## Users' options
 
-UK transplant algorithm depends on the points assigned for the [7 elements](#ukpoints) described earlier and for 5 of these elements, points can be redefined by KARS app's users on the sidebar panel on 'UK transplant' module. 
+UK transplant algorithm depends on the points assigned for the [7 elements](#ukpoints) described earlier and for 5 of these elements, points can be redefined by KARS app's users on the sidebar panel at *UK transplant* module. 
 
 Users can define the points to each day on dialysis:
 
@@ -153,7 +153,7 @@ For the criteria [HLA match and age combined](#HLAage), users can input coeffici
 knitr::include_graphics('images/ukhlaage.jpg', dpi = NA)
 ```
 
-Points for candidates' [matchability](#ms) can be adjusted by the parameters 'm', 'n' and 'o' on the equation, the plot shows how theses parameters influence attributed points:
+Points for candidates' [matchability](#ms) can be adjusted by the parameters 'm', 'n' and 'o' on the equation; the plot shows how theses parameters influence attributed points:
 
 ```{r ukmatch, fig.cap="Points for matchability", fig.align='left'}
 knitr::include_graphics('images/ukmatch.jpg', dpi = NA)
@@ -184,7 +184,7 @@ Uk transplant model simulation allows '**One donor**' selection or simulation fo
 knitr::include_graphics('images/ukonedonor.jpg', dpi = NA)
 ```
 
-Users can select: donor's age, height, gender, eGFR, days in hospital, blood group, HLA typing and if the donor have an history of hypertension or ife the dnoors is CMV +ve.
+Users can input: donor's age, height, gender, eGFR, days in hospital, blood group, HLA typing and if the donor have an history of hypertension or if the donor is CMV +ve.
 
 As result of the module a table with top 10 selected candidates for this specific donor will be displayed.
 

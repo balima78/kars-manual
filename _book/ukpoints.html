@@ -74,7 +74,13 @@
 <li><a href="./">KARS users' manual</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#citing-this-work"><i class="fa fa-check"></i>Citing this work</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributing"><i class="fa fa-check"></i>Contributing</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
+</ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Upload data</a><ul>
 <li class="chapter" data-level="2.1" data-path="example.html"><a href="example.html"><i class="fa fa-check"></i><b>2.1</b> Example data</a></li>
@@ -151,7 +157,7 @@ In the <a href="example.html#example">example data</a> provided on KARS app, <sp
 </div>
 <div id="tod" class="section level3">
 <h3><span class="header-section-number">6.1.2</span> Time on dialysis</h3>
-<p>For each day on dialysis, 1 point is given to transplant candidates, meaning that for each month, 30 points are assigned to candidates. As described for <a href="example.html#example">example data</a>, time on dialysis must be in months.</p>
+<p>For each day on dialysis, 1 point is given to transplant candidates, meaning that for each month on dialysis, 30 points are assigned to candidates. As described for <a href="example.html#example">example data</a>, time on dialysis must be in months.</p>
 <div class="warning">
 <p>
 Time on dialysis (column <em>dialysis</em>) must be in months!
@@ -163,7 +169,7 @@ In order to maintain congruence between the criteria used in the different app a
 </div>
 <div id="dric" class="section level3">
 <h3><span class="header-section-number">6.1.3</span> Donor-recipient risk index combinations</h3>
-<p>As described in the <a href="example.html#example">example data</a> candidates’ dataset have a column for recipient risk index (<strong>RRI</strong>) and donors’ dataset have a column for donor risk index (<strong>DRI</strong>). Also, <a href="users.html#users">user’s data</a> must have these columns. Both RRI and DRI can have 4 categories, R1 to R4 and D1 to D4, respectively.</p>
+<p>As described in the <a href="example.html#example">example data</a>, candidates’ dataset have a column for recipient risk index (<strong>RRI</strong>) and donors’ dataset have a column for donor risk index (<strong>DRI</strong>). Also, <a href="users.html#users">user’s data</a> must have these columns. Both RRI and DRI can have 4 categories, R1 to R4 and D1 to D4, respectively.</p>
 <p>Computation of recipients and donors’ categories are described on <a href="https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/16915/kidney-allocation-policy-pol186.pdf">UK National Health Sistem policy</a>.</p>
 <p>Points are defined as:</p>
 <table>
@@ -331,7 +337,7 @@ combinations included
 <ul>
 <li>Level 1 = <span class="math inline">\(1200 \cdot \cos(age/18) + 2300\)</span></li>
 <li>Level 2 = <span class="math inline">\(750 \cdot \cos(age/18) + 1500\)</span></li>
-<li>Level 3+4 = <span class="math inline">\(400 \cdot \sin(age/50\)</span></li>
+<li>Level 3+4 = <span class="math inline">\(400 \cdot \sin(age/50)\)</span></li>
 </ul>
 </div>
 <div id="agediff" class="section level3">

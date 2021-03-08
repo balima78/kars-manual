@@ -1,6 +1,7 @@
 --- 
 title: "KARS users' manual"
-author: "Bruno A Lima"
+author: 
+  - Bruno A Lima^[Oficina de BioEstatística, bioestatisticas@gmail.com]
 date: "updated at: `r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -36,6 +37,26 @@ KARS app is part of my PhD thesis on the PhD program in Health Data Science (HEA
 **Disclaimer:**
 KARS application is intended for research purposes only, not for clinical or commercial use. It is a non-profit service to the scientific community, provided on an 'AS-IS' basis without any warranty, expressed or implied. The authors can not be held liable in any way for the service provided here.
 ```
+
+### Prerequisites {-}
+
+Users of this application are expected to have some knowledge of kidney transplantation. In particular, those characteristics of patients and donors commonly used on kidney allocation systems.
+
+### Citing this work {-}
+
+### Acknowledgments {-}
+
+### Contributing {-}
+
+If you find a mistake, or have some suggestions, please file an issue or a pull request on the github page of the manual: https://github.com/balima78/kars-manual. If you do not have or want a github account, you can contact the author via the e-mail address at the bottom of this page.
+
+### License {-}
+
+```{r cc, echo=FALSE}
+knitr::include_graphics('images/cc.png', dpi = 100)
+```
+
+This work is licensed under [Creative Commons Attribution BY-NC 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages

@@ -10,7 +10,7 @@ Whenever the risk of a poor transplant outcome exists and is predictable, this f
 knitr::include_graphics('images/colors.jpg', dpi = 150)
 ```
 
-With this model patients are classified according to their clinical urgency (red color), and regarding their time on dialysis and cPRA value. With a orange color are marked those patients with a cPRA > 85% or with a time on dialysis higher than waiting time list 3rd quartile. As yellow are classified the patients with a cPRA > 50% or with a time on dialysis higher than waiting time median. And, as green are classified all the rest. Also, patients are allocated to donors within the same age group (old to old program) [@Lima2017], mimicking EuroTransplant senior program.
+With this model, patients are classified according to their clinical urgency (red color), and regarding their time on dialysis and cPRA value. With an orange color are marked those patients with a cPRA > 85% or with a time on dialysis higher than waiting time list 3rd quartile. As yellow are classified the patients with a cPRA > 50% or with a time on dialysis higher than waiting time median. And, as green are classified all the rest. Also, patients are allocated to donors within the same age group (old to old program) [@Lima2017], mimicking EuroTransplant senior program.
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)
