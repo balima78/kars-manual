@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6.2 Users’ options | KARS users’ manual</title>
   <meta name="description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6.2 Users’ options | KARS users’ manual" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,9 @@
   
 <link rel="prev" href="ukpoints.html"/>
 <link rel="next" href="model-simulation-1.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -48,15 +50,39 @@
 
 
 
-
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="libs/grViz-binding-1.0.8/grViz.js"></script>
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -74,7 +100,8 @@
 <li><a href="./">KARS users' manual</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#citing-this-work"><i class="fa fa-check"></i>Citing this work</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
@@ -82,25 +109,31 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Upload data</a><ul>
+<li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Upload data</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="example.html"><a href="example.html"><i class="fa fa-check"></i><b>2.1</b> Example data</a></li>
 <li class="chapter" data-level="2.2" data-path="users.html"><a href="users.html"><i class="fa fa-check"></i><b>2.2</b> User’s data</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="pt.html"><a href="pt.html"><i class="fa fa-check"></i><b>3</b> Portugal</a><ul>
+<li class="chapter" data-level="3" data-path="pt.html"><a href="pt.html"><i class="fa fa-check"></i><b>3</b> Portugal</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="ptoptions.html"><a href="ptoptions.html"><i class="fa fa-check"></i><b>3.1</b> User’s options</a></li>
 <li class="chapter" data-level="3.2" data-path="ptsimulation.html"><a href="ptsimulation.html"><i class="fa fa-check"></i><b>3.2</b> Model simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="et.html"><a href="et.html"><i class="fa fa-check"></i><b>4</b> EuroTransplant</a><ul>
+<li class="chapter" data-level="4" data-path="et.html"><a href="et.html"><i class="fa fa-check"></i><b>4</b> EuroTransplant</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="etkas-points.html"><a href="etkas-points.html"><i class="fa fa-check"></i><b>4.1</b> ETKAS points</a></li>
 <li class="chapter" data-level="4.2" data-path="etoptions.html"><a href="etoptions.html"><i class="fa fa-check"></i><b>4.2</b> User’s options</a></li>
 <li class="chapter" data-level="4.3" data-path="etsimulation.html"><a href="etsimulation.html"><i class="fa fa-check"></i><b>4.3</b> Model simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="lima.html"><a href="lima.html"><i class="fa fa-check"></i><b>5</b> Lima, et al</a><ul>
+<li class="chapter" data-level="5" data-path="lima.html"><a href="lima.html"><i class="fa fa-check"></i><b>5</b> Lima, et al</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="limaoptions.html"><a href="limaoptions.html"><i class="fa fa-check"></i><b>5.1</b> User’s options</a></li>
 <li class="chapter" data-level="5.2" data-path="model-simulation.html"><a href="model-simulation.html"><i class="fa fa-check"></i><b>5.2</b> Model simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="uk.html"><a href="uk.html"><i class="fa fa-check"></i><b>6</b> UK transplant</a><ul>
-<li class="chapter" data-level="6.1" data-path="ukpoints.html"><a href="ukpoints.html"><i class="fa fa-check"></i><b>6.1</b> Points-based system</a><ul>
+<li class="chapter" data-level="6" data-path="uk.html"><a href="uk.html"><i class="fa fa-check"></i><b>6</b> UK transplant</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="ukpoints.html"><a href="ukpoints.html"><i class="fa fa-check"></i><b>6.1</b> Points-based system</a>
+<ul>
 <li class="chapter" data-level="6.1.1" data-path="ukpoints.html"><a href="ukpoints.html#ms"><i class="fa fa-check"></i><b>6.1.1</b> Matchability</a></li>
 <li class="chapter" data-level="6.1.2" data-path="ukpoints.html"><a href="ukpoints.html#tod"><i class="fa fa-check"></i><b>6.1.2</b> Time on dialysis</a></li>
 <li class="chapter" data-level="6.1.3" data-path="ukpoints.html"><a href="ukpoints.html#dric"><i class="fa fa-check"></i><b>6.1.3</b> Donor-recipient risk index combinations</a></li>
@@ -134,39 +167,39 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="users-options" class="section level2">
+<div id="users-options" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Users’ options</h2>
 <p>UK transplant algorithm depends on the points assigned for the <a href="ukpoints.html#ukpoints">7 elements</a> described earlier and for 5 of these elements, points can be redefined by KARS app’s users on the sidebar panel at <em>UK transplant</em> module.</p>
 <p>Users can define the points to each day on dialysis:</p>
-<div class="figure" style="text-align: left"><span id="fig:uktod"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:uktod"></span>
 <img src="images/uktod.jpg" alt="Points per day on dialysis"  />
 <p class="caption">
 Figure 6.2: Points per day on dialysis
 </p>
 </div>
 <p>For the criteria <a href="ukpoints.html#HLAage">HLA match and age combined</a>, users can input coefficient values on the equation for the 3 HLA levels between donor and candidates:</p>
-<div class="figure" style="text-align: left"><span id="fig:ukhlaage"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:ukhlaage"></span>
 <img src="images/ukhlaage.jpg" alt="Points for HLA match and age combined"  />
 <p class="caption">
 Figure 6.3: Points for HLA match and age combined
 </p>
 </div>
-<p>Points for candidates’ <a href="ukpoints.html#ms">matchability</a> can be adjusted by the parameters ‘m’, ‘n’ and ‘o’ on the equation; the plot shows how theses parameters influence attributed points:</p>
-<div class="figure" style="text-align: left"><span id="fig:ukmatch"></span>
+<p>Points for candidates’ <a href="ukpoints.html#ms">matchability</a> can be adjusted by the parameters ‘m,’ ‘n’ and ‘o’ on the equation; the plot shows how theses parameters influence attributed points:</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:ukmatch"></span>
 <img src="images/ukmatch.jpg" alt="Points for matchability"  />
 <p class="caption">
 Figure 6.4: Points for matchability
 </p>
 </div>
 <p>Penalizations on <a href="ukpoints.html#HLAtotal">total HLA mismatch</a> can also be defined by the users:</p>
-<div class="figure" style="text-align: left"><span id="fig:uktotalhla"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:uktotalhla"></span>
 <img src="images/uktotalhla.jpg" alt="Total HLA mismatch penalization"  />
 <p class="caption">
 Figure 6.5: Total HLA mismatch penalization
 </p>
 </div>
 <p>Finally, users can define for how much blood group B candidates should be penalize when the available donor is group O:</p>
-<div class="figure" style="text-align: left"><span id="fig:ukblood"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:ukblood"></span>
 <img src="images/ukblood.jpg" alt="Blood group penalization"  />
 <p class="caption">
 Figure 6.6: Blood group penalization
@@ -184,7 +217,6 @@ Figure 6.6: Blood group penalization
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -203,6 +235,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -223,6 +256,10 @@ gitbook.start({
 "text": null
 },
 "download": ["kars-manual.pdf", "kars-manual.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

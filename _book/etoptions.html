@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4.2 User’s options | KARS users’ manual</title>
   <meta name="description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4.2 User’s options | KARS users’ manual" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,9 @@
   
 <link rel="prev" href="etkas-points.html"/>
 <link rel="next" href="etsimulation.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -48,15 +50,39 @@
 
 
 
-
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="libs/grViz-binding-1.0.8/grViz.js"></script>
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -74,7 +100,8 @@
 <li><a href="./">KARS users' manual</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#citing-this-work"><i class="fa fa-check"></i>Citing this work</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
@@ -82,25 +109,31 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Upload data</a><ul>
+<li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Upload data</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="example.html"><a href="example.html"><i class="fa fa-check"></i><b>2.1</b> Example data</a></li>
 <li class="chapter" data-level="2.2" data-path="users.html"><a href="users.html"><i class="fa fa-check"></i><b>2.2</b> User’s data</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="pt.html"><a href="pt.html"><i class="fa fa-check"></i><b>3</b> Portugal</a><ul>
+<li class="chapter" data-level="3" data-path="pt.html"><a href="pt.html"><i class="fa fa-check"></i><b>3</b> Portugal</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="ptoptions.html"><a href="ptoptions.html"><i class="fa fa-check"></i><b>3.1</b> User’s options</a></li>
 <li class="chapter" data-level="3.2" data-path="ptsimulation.html"><a href="ptsimulation.html"><i class="fa fa-check"></i><b>3.2</b> Model simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="et.html"><a href="et.html"><i class="fa fa-check"></i><b>4</b> EuroTransplant</a><ul>
+<li class="chapter" data-level="4" data-path="et.html"><a href="et.html"><i class="fa fa-check"></i><b>4</b> EuroTransplant</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="etkas-points.html"><a href="etkas-points.html"><i class="fa fa-check"></i><b>4.1</b> ETKAS points</a></li>
 <li class="chapter" data-level="4.2" data-path="etoptions.html"><a href="etoptions.html"><i class="fa fa-check"></i><b>4.2</b> User’s options</a></li>
 <li class="chapter" data-level="4.3" data-path="etsimulation.html"><a href="etsimulation.html"><i class="fa fa-check"></i><b>4.3</b> Model simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="lima.html"><a href="lima.html"><i class="fa fa-check"></i><b>5</b> Lima, et al</a><ul>
+<li class="chapter" data-level="5" data-path="lima.html"><a href="lima.html"><i class="fa fa-check"></i><b>5</b> Lima, et al</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="limaoptions.html"><a href="limaoptions.html"><i class="fa fa-check"></i><b>5.1</b> User’s options</a></li>
 <li class="chapter" data-level="5.2" data-path="model-simulation.html"><a href="model-simulation.html"><i class="fa fa-check"></i><b>5.2</b> Model simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="uk.html"><a href="uk.html"><i class="fa fa-check"></i><b>6</b> UK transplant</a><ul>
-<li class="chapter" data-level="6.1" data-path="ukpoints.html"><a href="ukpoints.html"><i class="fa fa-check"></i><b>6.1</b> Points-based system</a><ul>
+<li class="chapter" data-level="6" data-path="uk.html"><a href="uk.html"><i class="fa fa-check"></i><b>6</b> UK transplant</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="ukpoints.html"><a href="ukpoints.html"><i class="fa fa-check"></i><b>6.1</b> Points-based system</a>
+<ul>
 <li class="chapter" data-level="6.1.1" data-path="ukpoints.html"><a href="ukpoints.html#ms"><i class="fa fa-check"></i><b>6.1.1</b> Matchability</a></li>
 <li class="chapter" data-level="6.1.2" data-path="ukpoints.html"><a href="ukpoints.html#tod"><i class="fa fa-check"></i><b>6.1.2</b> Time on dialysis</a></li>
 <li class="chapter" data-level="6.1.3" data-path="ukpoints.html"><a href="ukpoints.html#dric"><i class="fa fa-check"></i><b>6.1.3</b> Donor-recipient risk index combinations</a></li>
@@ -134,19 +167,19 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="etoptions" class="section level2">
+<div id="etoptions" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> User’s options</h2>
 <p>EuroTransplant module presents default options, in side bar, for kidney allocation, these default points are the same presented in table <a href="etkas-points.html#tab:pointsET">4.1</a>.</p>
-<div class="figure" style="text-align: left"><span id="fig:etpoints"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:etpoints"></span>
 <img src="images/etpoints.jpg" alt="Punctuation for ET model"  />
 <p class="caption">
 Figure 4.2: Punctuation for ET model
 </p>
 </div>
 <p>Users can select different points’ options to simulate kidneys’ allocation and also the type of ABO compatibility imposed between donors and candidates (identical or not). Besides points attributed to HLA mismatchs, it is also possible to define the points for each month on dialysis. The check option for ‘ABO identical’ is no applicable to patients in the Acceptable Mismatch Program.</p>
-<p>On the main panel, users can opt to simulate kidney allocation defining the characteristics of a single donor (‘<strong>One donor</strong>’) or for a group of donors uploaded from a file (‘<strong>Multiple donors</strong>’). In both cases, users must explicitly define how candidates’ Mismatch Probability (MMP) are to be computed, if with HLA frequencies from a published <a href="https://www.slideshare.net/balima78/lima-2013">Portuguese cohort</a> <span class="citation">(Lima and Alves <a href="#ref-Lima2013d" role="doc-biblioref">2013</a>)</span>, or with HLA frequencies from Ducth donors as described <a href="https://www.eurotransplant.org/wp-content/uploads/2020/01/H4-Kidney.pdf">here</a>.</p>
-<div class="figure" style="text-align: left"><span id="fig:etHLAfreqs"></span>
-<img src="images/etHLAfreq.jpg" alt="Options for single donor and HLA frequencies to use on MMP computation"  />
+<p>On the main panel, users can opt to simulate kidney allocation defining the characteristics of a single donor (‘<strong>One donor</strong>’) or for a group of donors uploaded from a file (‘<strong>Multiple donors</strong>’). In both cases, users must explicitly define how candidates’ Mismatch Probability (MMP) are to be computed, if with HLA frequencies from a published <a href="https://www.slideshare.net/balima78/lima-2013">Portuguese cohort</a> <span class="citation">(<a href="#ref-Lima2013d" role="doc-biblioref">Lima and Alves 2013</a>)</span>, or with HLA frequencies from Ducth donors as described <a href="https://www.eurotransplant.org/wp-content/uploads/2020/01/H4-Kidney.pdf">here</a>.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:etHLAfreqs"></span>
+<img src="images/etHLAfreq.JPG" alt="Options for single donor and HLA frequencies to use on MMP computation"  />
 <p class="caption">
 Figure 4.3: Options for single donor and HLA frequencies to use on MMP computation
 </p>
@@ -155,9 +188,9 @@ Figure 4.3: Options for single donor and HLA frequencies to use on MMP computati
 <p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
 </div>
 <h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-Lima2013d">
-<p>Lima, BA, and H Alves. 2013. “HLA Allelic and Haplotypic Diversity in Bone Marrow Volunteer Donors from Northern Portugal.” <em>Organs, Tissues &amp; Cells</em> 16: 19–26.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Lima2013d" class="csl-entry">
+Lima, BA, and H Alves. 2013. <span>“HLA Allelic and Haplotypic Diversity in Bone Marrow Volunteer Donors from Northern Portugal.”</span> <em>Organs, Tissues &amp; Cells</em> 16: 19–26.
 </div>
 </div>
             </section>
@@ -170,7 +203,6 @@ Figure 4.3: Options for single donor and HLA frequencies to use on MMP computati
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -189,6 +221,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -209,6 +242,10 @@ gitbook.start({
 "text": null
 },
 "download": ["kars-manual.pdf", "kars-manual.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

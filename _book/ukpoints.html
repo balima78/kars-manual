@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6.1 Points-based system | KARS users’ manual</title>
   <meta name="description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6.1 Points-based system | KARS users’ manual" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,9 @@
   
 <link rel="prev" href="uk.html"/>
 <link rel="next" href="users-options.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -48,15 +50,39 @@
 
 
 
-
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="libs/grViz-binding-1.0.8/grViz.js"></script>
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -74,7 +100,8 @@
 <li><a href="./">KARS users' manual</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#citing-this-work"><i class="fa fa-check"></i>Citing this work</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
@@ -82,25 +109,31 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Upload data</a><ul>
+<li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Upload data</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="example.html"><a href="example.html"><i class="fa fa-check"></i><b>2.1</b> Example data</a></li>
 <li class="chapter" data-level="2.2" data-path="users.html"><a href="users.html"><i class="fa fa-check"></i><b>2.2</b> User’s data</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="pt.html"><a href="pt.html"><i class="fa fa-check"></i><b>3</b> Portugal</a><ul>
+<li class="chapter" data-level="3" data-path="pt.html"><a href="pt.html"><i class="fa fa-check"></i><b>3</b> Portugal</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="ptoptions.html"><a href="ptoptions.html"><i class="fa fa-check"></i><b>3.1</b> User’s options</a></li>
 <li class="chapter" data-level="3.2" data-path="ptsimulation.html"><a href="ptsimulation.html"><i class="fa fa-check"></i><b>3.2</b> Model simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="et.html"><a href="et.html"><i class="fa fa-check"></i><b>4</b> EuroTransplant</a><ul>
+<li class="chapter" data-level="4" data-path="et.html"><a href="et.html"><i class="fa fa-check"></i><b>4</b> EuroTransplant</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="etkas-points.html"><a href="etkas-points.html"><i class="fa fa-check"></i><b>4.1</b> ETKAS points</a></li>
 <li class="chapter" data-level="4.2" data-path="etoptions.html"><a href="etoptions.html"><i class="fa fa-check"></i><b>4.2</b> User’s options</a></li>
 <li class="chapter" data-level="4.3" data-path="etsimulation.html"><a href="etsimulation.html"><i class="fa fa-check"></i><b>4.3</b> Model simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="lima.html"><a href="lima.html"><i class="fa fa-check"></i><b>5</b> Lima, et al</a><ul>
+<li class="chapter" data-level="5" data-path="lima.html"><a href="lima.html"><i class="fa fa-check"></i><b>5</b> Lima, et al</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="limaoptions.html"><a href="limaoptions.html"><i class="fa fa-check"></i><b>5.1</b> User’s options</a></li>
 <li class="chapter" data-level="5.2" data-path="model-simulation.html"><a href="model-simulation.html"><i class="fa fa-check"></i><b>5.2</b> Model simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="uk.html"><a href="uk.html"><i class="fa fa-check"></i><b>6</b> UK transplant</a><ul>
-<li class="chapter" data-level="6.1" data-path="ukpoints.html"><a href="ukpoints.html"><i class="fa fa-check"></i><b>6.1</b> Points-based system</a><ul>
+<li class="chapter" data-level="6" data-path="uk.html"><a href="uk.html"><i class="fa fa-check"></i><b>6</b> UK transplant</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="ukpoints.html"><a href="ukpoints.html"><i class="fa fa-check"></i><b>6.1</b> Points-based system</a>
+<ul>
 <li class="chapter" data-level="6.1.1" data-path="ukpoints.html"><a href="ukpoints.html#ms"><i class="fa fa-check"></i><b>6.1.1</b> Matchability</a></li>
 <li class="chapter" data-level="6.1.2" data-path="ukpoints.html"><a href="ukpoints.html#tod"><i class="fa fa-check"></i><b>6.1.2</b> Time on dialysis</a></li>
 <li class="chapter" data-level="6.1.3" data-path="ukpoints.html"><a href="ukpoints.html#dric"><i class="fa fa-check"></i><b>6.1.3</b> Donor-recipient risk index combinations</a></li>
@@ -134,7 +167,7 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="ukpoints" class="section level2">
+<div id="ukpoints" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Points-based system</h2>
 <p>Transplant candidates are ordered by assigned points for each available donor. Those points are computed as the sum of 7 elements:</p>
 <ol style="list-style-type: decimal">
@@ -146,7 +179,7 @@
 <li><a href="ukpoints.html#HLAtotal">Total HLA mismatch</a></li>
 <li><a href="ukpoints.html#blood">Blood group match</a></li>
 </ol>
-<div id="ms" class="section level3">
+<div id="ms" class="section level3" number="6.1.1">
 <h3><span class="header-section-number">6.1.1</span> Matchability</h3>
 <p>Points for matchability are calculated from the formula: <span class="math inline">\(10 \cdot (1 + (MatchScore / 4.5)^{4.7})\)</span>, where <span class="math inline">\(MatchScore\)</span> (MS) take values <span class="math inline">\(1\)</span> trough <span class="math inline">\(10\)</span> corresponding to candidates’ percentil on waiting list when computed the number of donors ABO identical and HLA compatible for each candidate.</p>
 <div class="warning">
@@ -155,7 +188,7 @@ In the <a href="example.html#example">example data</a> provided on KARS app, <sp
 </p>
 </div>
 </div>
-<div id="tod" class="section level3">
+<div id="tod" class="section level3" number="6.1.2">
 <h3><span class="header-section-number">6.1.2</span> Time on dialysis</h3>
 <p>For each day on dialysis, 1 point is given to transplant candidates, meaning that for each month on dialysis, 30 points are assigned to candidates. As described for <a href="example.html#example">example data</a>, time on dialysis must be in months.</p>
 <div class="warning">
@@ -167,7 +200,7 @@ In order to maintain congruence between the criteria used in the different app a
 </p>
 </div>
 </div>
-<div id="dric" class="section level3">
+<div id="dric" class="section level3" number="6.1.3">
 <h3><span class="header-section-number">6.1.3</span> Donor-recipient risk index combinations</h3>
 <p>As described in the <a href="example.html#example">example data</a>, candidates’ dataset have a column for recipient risk index (<strong>RRI</strong>) and donors’ dataset have a column for donor risk index (<strong>DRI</strong>). Also, <a href="users.html#users">user’s data</a> must have these columns. Both RRI and DRI can have 4 categories, R1 to R4 and D1 to D4, respectively.</p>
 <p>Computation of recipients and donors’ categories are described on <a href="https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/16915/kidney-allocation-policy-pol186.pdf">UK National Health Sistem policy</a>.</p>
@@ -266,7 +299,7 @@ D4
 </tbody>
 </table>
 </div>
-<div id="HLAage" class="section level3">
+<div id="HLAage" class="section level3" number="6.1.4">
 <h3><span class="header-section-number">6.1.4</span> HLA match and age combined</h3>
 <p>For HLA match and age combined, first we must define HLA mismatch levels for HLA-A, -B and -DR for each donor-recipient pair:</p>
 <table>
@@ -340,12 +373,12 @@ combinations included
 <li>Level 3+4 = <span class="math inline">\(400 \cdot \sin(age/50)\)</span></li>
 </ul>
 </div>
-<div id="agediff" class="section level3">
+<div id="agediff" class="section level3" number="6.1.5">
 <h3><span class="header-section-number">6.1.5</span> Donor-recipient age difference</h3>
 <p>Points for age difference between the donor and the transplant candidates are given for:</p>
 <p><span class="math inline">\(\frac{1}{2} \cdot(\)</span>donor-candidate age difference<span class="math inline">\()^2\)</span></p>
 </div>
-<div id="HLAtotal" class="section level3">
+<div id="HLAtotal" class="section level3" number="6.1.6">
 <h3><span class="header-section-number">6.1.6</span> Total HLA mismatch</h3>
 <p>Points for total mismatch between donor and candidates are calculated based on the number of mismatchs at HLA-A, -B and -DR:</p>
 <ul>
@@ -363,7 +396,7 @@ In KARS app, since only data on HLA-A, -B and -DR are used, total mismatch score
 </p>
 </div>
 </div>
-<div id="blood" class="section level3">
+<div id="blood" class="section level3" number="6.1.7">
 <h3><span class="header-section-number">6.1.7</span> Blood group match</h3>
 <p>Within <strong>TIER B</strong> candidates and for O blood group donors, a thousand points are substracted to those candidates (-1000 points).</p>
 </div>
@@ -378,7 +411,6 @@ In KARS app, since only data on HLA-A, -B and -DR are used, total mismatch score
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -397,6 +429,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -417,6 +450,10 @@ gitbook.start({
 "text": null
 },
 "download": ["kars-manual.pdf", "kars-manual.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

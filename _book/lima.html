@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 Lima, et al | KARS users’ manual</title>
   <meta name="description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 Lima, et al | KARS users’ manual" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,9 @@
   
 <link rel="prev" href="etsimulation.html"/>
 <link rel="next" href="limaoptions.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -48,15 +50,39 @@
 
 
 
-
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="libs/grViz-binding-1.0.8/grViz.js"></script>
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -74,7 +100,8 @@
 <li><a href="./">KARS users' manual</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#citing-this-work"><i class="fa fa-check"></i>Citing this work</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
@@ -82,25 +109,31 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Upload data</a><ul>
+<li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Upload data</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="example.html"><a href="example.html"><i class="fa fa-check"></i><b>2.1</b> Example data</a></li>
 <li class="chapter" data-level="2.2" data-path="users.html"><a href="users.html"><i class="fa fa-check"></i><b>2.2</b> User’s data</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="pt.html"><a href="pt.html"><i class="fa fa-check"></i><b>3</b> Portugal</a><ul>
+<li class="chapter" data-level="3" data-path="pt.html"><a href="pt.html"><i class="fa fa-check"></i><b>3</b> Portugal</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="ptoptions.html"><a href="ptoptions.html"><i class="fa fa-check"></i><b>3.1</b> User’s options</a></li>
 <li class="chapter" data-level="3.2" data-path="ptsimulation.html"><a href="ptsimulation.html"><i class="fa fa-check"></i><b>3.2</b> Model simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="et.html"><a href="et.html"><i class="fa fa-check"></i><b>4</b> EuroTransplant</a><ul>
+<li class="chapter" data-level="4" data-path="et.html"><a href="et.html"><i class="fa fa-check"></i><b>4</b> EuroTransplant</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="etkas-points.html"><a href="etkas-points.html"><i class="fa fa-check"></i><b>4.1</b> ETKAS points</a></li>
 <li class="chapter" data-level="4.2" data-path="etoptions.html"><a href="etoptions.html"><i class="fa fa-check"></i><b>4.2</b> User’s options</a></li>
 <li class="chapter" data-level="4.3" data-path="etsimulation.html"><a href="etsimulation.html"><i class="fa fa-check"></i><b>4.3</b> Model simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="lima.html"><a href="lima.html"><i class="fa fa-check"></i><b>5</b> Lima, et al</a><ul>
+<li class="chapter" data-level="5" data-path="lima.html"><a href="lima.html"><i class="fa fa-check"></i><b>5</b> Lima, et al</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="limaoptions.html"><a href="limaoptions.html"><i class="fa fa-check"></i><b>5.1</b> User’s options</a></li>
 <li class="chapter" data-level="5.2" data-path="model-simulation.html"><a href="model-simulation.html"><i class="fa fa-check"></i><b>5.2</b> Model simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="uk.html"><a href="uk.html"><i class="fa fa-check"></i><b>6</b> UK transplant</a><ul>
-<li class="chapter" data-level="6.1" data-path="ukpoints.html"><a href="ukpoints.html"><i class="fa fa-check"></i><b>6.1</b> Points-based system</a><ul>
+<li class="chapter" data-level="6" data-path="uk.html"><a href="uk.html"><i class="fa fa-check"></i><b>6</b> UK transplant</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="ukpoints.html"><a href="ukpoints.html"><i class="fa fa-check"></i><b>6.1</b> Points-based system</a>
+<ul>
 <li class="chapter" data-level="6.1.1" data-path="ukpoints.html"><a href="ukpoints.html#ms"><i class="fa fa-check"></i><b>6.1.1</b> Matchability</a></li>
 <li class="chapter" data-level="6.1.2" data-path="ukpoints.html"><a href="ukpoints.html#tod"><i class="fa fa-check"></i><b>6.1.2</b> Time on dialysis</a></li>
 <li class="chapter" data-level="6.1.3" data-path="ukpoints.html"><a href="ukpoints.html#dric"><i class="fa fa-check"></i><b>6.1.3</b> Donor-recipient risk index combinations</a></li>
@@ -134,27 +167,27 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lima" class="section level1">
+<div id="lima" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Lima, et al</h1>
-<p>In 2003, we proposed a KAS <span class="citation">(Lima, Mendes, and Alves <a href="#ref-Lima2013c" role="doc-biblioref">2013</a><a href="#ref-Lima2013c" role="doc-biblioref">b</a>)</span> based in a color prioritization of candidates in waiting list for kidney transplantation. The aim of that proposal was to define a simple and transparent set of rules that could be used as a baseline in comparison to others KAS. Also, with this color classification it would be easier to explain to patients, in a more intuitive manner, how far they are from being transplanted.</p>
-<p>This system of colors also takes into account the criteria of utility and justice for kidney distribution. By setting only 4 colour groups (figure <a href="lima.html#fig:colors">5.1</a>) on the basis of justice (time on dialysis and probability of transplantation) and, within each of these groups, candidates are ordered based by efficiency (HLA compatibilities); the proposed criteria meant to be balanced <span class="citation">(Lima, Mendes, and Alves <a href="#ref-Lima2013c" role="doc-biblioref">2013</a><a href="#ref-Lima2013c" role="doc-biblioref">b</a>)</span>.</p>
+<p>In 2003, we proposed a KAS <span class="citation">(<a href="#ref-Lima2013c" role="doc-biblioref">Lima, Mendes, and Alves 2013b</a>)</span> based in a color prioritization of candidates in waiting list for kidney transplantation. The aim of that proposal was to define a simple and transparent set of rules that could be used as a baseline in comparison to others KAS. Also, with this color classification it would be easier to explain to patients, in a more intuitive manner, how far they are from being transplanted.</p>
+<p>This system of colors also takes into account the criteria of utility and justice for kidney distribution. By setting only 4 colour groups (figure <a href="lima.html#fig:colors">5.1</a>) on the basis of justice (time on dialysis and probability of transplantation) and, within each of these groups, candidates are ordered based by efficiency (HLA compatibilities); the proposed criteria meant to be balanced <span class="citation">(<a href="#ref-Lima2013c" role="doc-biblioref">Lima, Mendes, and Alves 2013b</a>)</span>.</p>
 <p>Whenever the risk of a poor transplant outcome exists and is predictable, this fact must be explained to the patient.</p>
-<div class="figure" style="text-align: left"><span id="fig:colors"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:colors"></span>
 <img src="images/colors.jpg" alt="Kidney allocation color system" width="287" />
 <p class="caption">
 Figure 5.1: Kidney allocation color system
 </p>
 </div>
-<p>With this model, patients are classified according to their clinical urgency (red color), and regarding their time on dialysis and cPRA value. With an orange color are marked those patients with a cPRA &gt; 85% or with a time on dialysis higher than waiting time list 3rd quartile. As yellow are classified the patients with a cPRA &gt; 50% or with a time on dialysis higher than waiting time median. And, as green are classified all the rest. Also, patients are allocated to donors within the same age group (old to old program) <span class="citation">(Lima and Alves <a href="#ref-Lima2017" role="doc-biblioref">2017</a>)</span>, mimicking EuroTransplant senior program.</p>
+<p>With this model, patients are classified according to their clinical urgency (red color), and regarding their time on dialysis and cPRA value. With an orange color are marked those patients with a cPRA &gt; 85% or with a time on dialysis higher than waiting time list 3rd quartile. As yellow are classified the patients with a cPRA &gt; 50% or with a time on dialysis higher than waiting time median. And, as green are classified all the rest. Also, patients are allocated to donors within the same age group (old to old program) <span class="citation">(<a href="#ref-Lima2017" role="doc-biblioref">Lima and Alves 2017</a>)</span>, mimicking EuroTransplant senior program.</p>
 <p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
 </div>
 <h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-Lima2017">
-<p>Lima, BA, and H Alves. 2017. “Selection of Donor-Recipient Pairs in Renal Transplantation: Comparative Simulation Results.” <em>Acta Med Port</em> 30(12): 854–60.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Lima2017" class="csl-entry">
+———. 2017. <span>“Selection of Donor-Recipient Pairs in Renal Transplantation: Comparative Simulation Results.”</span> <em>Acta Med Port</em> 30(12): 854–60.
 </div>
-<div id="ref-Lima2013c">
-<p>Lima, BA, M Mendes, and H Alves. 2013b. “Kidney Transplant Allocation in Portugal.” <em>Port J Nephrol Hypert</em> 27(4): 313–16.</p>
+<div id="ref-Lima2013c" class="csl-entry">
+———. 2013b. <span>“Kidney Transplant Allocation in Portugal.”</span> <em>Port J Nephrol Hypert</em> 27(4): 313–16.
 </div>
 </div>
             </section>
@@ -167,7 +200,6 @@ Figure 5.1: Kidney allocation color system
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -186,6 +218,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -206,6 +239,10 @@ gitbook.start({
 "text": null
 },
 "download": ["kars-manual.pdf", "kars-manual.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
