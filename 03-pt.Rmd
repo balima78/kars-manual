@@ -1,6 +1,6 @@
 # Portugal {#pt}
 
-Portuguese rules on allocation of kidneys from deceased donors (PT model) were published on ordinance 6357/2007 and are based on a scoring system (table \@ref(tab:ord6357)) that takes in consideration: HLA mismatches between donor and transplant candidate; level o immunization of the candidate; time on dialysis; an age difference between donor and transplant candidate.
+Portuguese rules on allocation of kidneys from deceased donors (PT model) were published on ordinance 6357/2007 and are based on a scoring system (table \@ref(tab:ord6357)) that takes in consideration: HLA mismatches between donor and transplant candidate; level of immunization of the candidate; time on dialysis; and age difference between donor and transplant candidate.
 
 ```{r ord6357, tidy=FALSE}
 options(knitr.kable.NA = '')

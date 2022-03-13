@@ -44,6 +44,8 @@ Users of this application are expected to have some knowledge of kidney transpla
 
 ### Citing this work {-}
 
+Bruno A. Lima, Teresa S. Henriques, Helena Alves. Kidney allocation rules simulator. Transplant Immunology, 2022; 72: 101578 [https://doi.org/10.1016/j.trim.2022.101578](https://doi.org/10.1016/j.trim.2022.101578)
+
 ### Acknowledgments {-}
 
 ### Contributing {-}

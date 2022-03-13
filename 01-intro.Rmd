@@ -13,7 +13,7 @@ This users' manual describes how to use the Kidney Allocation Rules Simulator (K
 
 The manual is divided in 7 chapters, the first one is this **Introduction** (\@ref(intro)), the last one is a simple **Conclusion** (\@ref(conclusion)) and the remaining 5 correspond to the 5 modules on KARS app, four of them  are different Kidney Allocation Systems (KAS).  
 
-The chapter \@ref(data) describe the type of data used in the application and how the user can upload their own data. This data is not stored anywhere on our app and the responsibility for its usage is entirely to the user. 
+The chapter \@ref(data) describes the type of data used in the application and how the user can upload their own data. This data is not stored anywhere on our app and the responsibility for its usage is entirely to the user. 
 
 Chapter \@ref(pt) presents the Portuguese algorithm on the allocation of kidneys from deceased donors and how the user can modify some parameters in order to understand how it works.
 
