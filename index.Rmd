@@ -22,7 +22,7 @@ knitr::include_graphics('images/kidneys.jpg', dpi = 100)
 
 The **Kidney Allocation Rules Simulator** (KARS) is an application that allows to simulate different kidney allocation rules in transplantation.
 
-This application is built on shiny and is available on shinyapps.io: <https://balima.shinyapps.io/kars/>
+This application is built on _{shiny}_ and is available on _shinyapps.io_: <https://txor.shinyapps.io/kars/>
 
 Before implementing new rules, it is necessary to test them in order to dissipate, as much as possible, doubts questioning implementation’s success. The development of this application had as motivation being an aid to clarify the usefulness and efficiency of new set of rules for kidney allocation.
 
@@ -47,6 +47,12 @@ Users of this application are expected to have some knowledge of kidney transpla
 Bruno A. Lima, Teresa S. Henriques, Helena Alves. Kidney allocation rules simulator. Transplant Immunology, 2022; 72: 101578 [https://doi.org/10.1016/j.trim.2022.101578](https://doi.org/10.1016/j.trim.2022.101578)
 
 ### Acknowledgments {-}
+
+This project received the “Antonio Morais Sarmento” research grant from the Portuguese Society of Transplantation. This funding had no role in: study design; collection, analysis or interpretation of data.
+
+```{r spt, echo=FALSE}
+knitr::include_graphics('images/spt.jpg', dpi = 100)
+```
 
 ### Contributing {-}
 

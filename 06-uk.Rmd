@@ -188,7 +188,7 @@ Users can input: donor's age, height, gender, eGFR, days in hospital, blood grou
 
 As result of the module a table with top 10 selected candidates for this specific donor will be displayed.
 
-When option '**Multiple donors**' is selected, users just have to run it and wait for the results. Again, here as previously described for the previous algorithms, a downloadable dataset with donor-recipientes pairs characteristics and a table with the resumed characteristics will be displayed.  
+When option '**Multiple donors**' is selected, users just have to run it and wait for the results. Again, here as previously described for the previous algorithms, a downloadable dataset with donor-recipients pairs characteristics and a table with the resumed characteristics will be displayed.  
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)

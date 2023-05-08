@@ -1,0 +1,99 @@
+# Equity Matrix (EQM) {#eqm}
+
+Striking a balance between justice and utility in the distribution of a scarce good such as deceased donors’ kidneys for transplantation has long been a challenge and a goal for many organizations that bear responsibility for defining organ allocation systems. 
+
+Under the ethical principle of justice, equals should be treated equally so that all patients have an equal opportunity to access transplantation. Conversely, given utilitarian values, some inequalities may be allowed if doing so gives society – as a group – the greatest benefit through maximizing the utility of resources. Therefore, kidneys from deceased donors may be directed to those patients who can best use them and are less likely to return to waiting lists due to graft rejection. 
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```
+
+## Utility / Justice matrix
+
+In a broad way, we can define two set of criteria in organ transplantation allocation:
+
++ Utility criteria:
+    + longevity match;
+    + number of HLA mismatchs;
+    
++ Justice criteria:
+    + waiting time on dialysis;
+    + HLA sensitization;
+    + medical urgency.
+    
+The Equity Matrix (EQM) algorithm for kidney allocation is based in an utility/justice matrix, where weights can be given to both utility and justice criteria. From an initial maximum value we substract by row the rate given to utility and we substract by column the rate given to justice. 
+
+```{r eqmujmatx, fig.cap="Utility / Justice matrix", fig.align='left'}
+
+knitr::include_graphics('images/eqm_uj_matx.jpg', dpi = 100)
+
+```
+
+```{block, type='warning', echo = T}
+
+Legend:
+
++ `ratio.util` - A numerical value between 0 and 0.5 corresponding to the decreasing rate for the utility criterion (by row);
++ `ratio.just` - A numerical value between 0 and 0.5 corresponding to the decreasing rate for the justice criterion (by column);
++ `ageDiff` - absolute value of the age difference between donor and transplant candidate;
++ `mmHLA` - number of HLA mismatchs between donor and transplant candidate;
++ `TmDial` - candidate's time on dialysis;
++ `q2` and `q3` - 2nd and 3rd quartiles of wiat listed candidates' time on dialysis;
++ `cPRA` - percentage value of calculated Panel Reactive Antibodies.
+
+```
+
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```
+
+## User's options
+
+EQM algorithm can be configured with a total of 7 users' inputs (besides ABO compatibility): the ratios for utility and justice criteria, values for median and 3rd quartile candidates’ time on dialysis and possible priorization criteria. 
+
+Inputs on ratios for utility and justice must be values between 0 and 0.5 and those define how matrix points must decrease by row and by column, respectively.
+
+```{r eqmratios, fig.cap="Values for utility and justice decreasing rates", fig.align='left'}
+knitr::include_graphics('images/eqm_ratios.jpg', dpi = 100)
+```
+
+According to the imputed rates, the respective Utility/Justice matrix is displaied:
+
+```{r eqmujmatx0101, fig.cap="Utility/justice matrix according to the imputed rates", fig.align='left'}
+knitr::include_graphics('images/eqm_uj_matx0101.jpg', dpi = 100)
+```
+
+Users can define 2nd and 3rd quartiles of wiat listed candidates time on dialysis.
+
+```{r eqmquartiles, fig.cap="Values for 2nd and 3rd quartiles time on dialysis", fig.align='left'}
+knitr::include_graphics('images/eqm_quartiles.jpg', dpi = 100)
+```
+
+Checking each one of the boxes, it is also possible to define allocation priorities mimicking those used on [EuroTransplant](#et): Senior Program, Acceptable Mismatch program, and 000 HLA mismatches between the dodor and recipients. 
+
+```{r eqmpriors, fig.cap="Possible allocation priorities", fig.align='left'}
+knitr::include_graphics('images/eqm_priors.jpg', dpi = 100)
+```
+
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```
+
+## Model simulation
+
+As previously described for other modules, on the main panel of the EQM module, we can run the simulation for **One donor** or for **Multiple donors**.
+
+When selected the option for **One donor**, the user can input donor’s age, his blood group and his HLA typing. When selected the Multiple donors the user just have to run the simulation and wait for the results.
+
+```{r eqmmultdonor, fig.cap="Multiple donors option", fig.align='left'}
+knitr::include_graphics('images/eqm_multdonor.jpg', dpi = 150)
+```
+
+As results we will have a downloadable dataset with donor-recipients pairs characteristics and a table with the resumed characteristics.
+
+
+```{r fig.align='right', echo=FALSE}
+knitr::include_graphics('images/kars.jpg', dpi = 200)
+```

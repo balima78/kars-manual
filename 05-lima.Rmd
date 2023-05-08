@@ -42,7 +42,7 @@ When selected the option for **One donor**, the user can input donor's age, his 
 knitr::include_graphics('images/limamultdonor.jpg', dpi = 150)
 ```
 
-As results we will have a downloadable dataset with donor-recipientes pairs characteristics and a table with the resumed characteristics.
+As results we will have a downloadable dataset with donor-recipients pairs characteristics and a table with the resumed characteristics.
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)

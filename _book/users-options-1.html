@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.3 Model simulation | KARS users’ manual</title>
+  <title>7.2 User’s options | KARS users’ manual</title>
   <meta name="description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.3 Model simulation | KARS users’ manual" />
+  <meta property="og:title" content="7.2 User’s options | KARS users’ manual" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.3 Model simulation | KARS users’ manual" />
+  <meta name="twitter:title" content="7.2 User’s options | KARS users’ manual" />
   
   <meta name="twitter:description" content="This is the user manual for KARS application using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="etoptions.html"/>
-<link rel="next" href="lima.html"/>
+<link rel="prev" href="utility-justice-matrix.html"/>
+<link rel="next" href="model-simulation-2.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -173,35 +173,46 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="etsimulation" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Model simulation</h2>
-<p>When selected the option <strong>One donor</strong>, users have to input donor’s age, ABO blood type and HLA typing. As result, is presented a table with the top 10 candidates selected for this donor (candidates are selected from a <a href="users.html#users">candidates’ uploaded file</a> or from the <a href="example.html#example">candidates’ example data</a>).</p>
-<p>This table with the selected candidates will have not only candidates’ characteristics but also ETKAS points atributted to each candidate and if they belong to Senior Program (SP) or Acceptable Mismatch Program (AM) (1 for yes / 0 for no), on the last columns.</p>
-<p>For the option <strong>Multiple donors</strong> and after selected <strong>HLA frequencies origin, to compute MMP</strong>, users just have to run the simulation:</p>
-<div class="figure" style="text-align: left"><span style="display:block;" id="fig:etmultdonor"></span>
-<img src="images/etmultdonor.jpg" alt="Select option and run it!!"  />
+<div id="users-options-1" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> User’s options</h2>
+<p>EQM algorithm can be configured with a total of 7 users’ inputs (besides ABO compatibility): the ratios for utility and justice criteria, values for median and 3rd quartile candidates’ time on dialysis and possible priorization criteria.</p>
+<p>Inputs on ratios for utility and justice must be values between 0 and 0.5 and those define how matrix points must decrease by row and by column, respectively.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:eqmratios"></span>
+<img src="images/eqm_ratios.JPG" alt="Values for utility and justice decreasing rates" width="335" />
 <p class="caption">
-Figure 4.4: Select option and run it!!
+Figure 7.2: Values for utility and justice decreasing rates
 </p>
 </div>
-<p>As a result will be returned a downloadable table as the above-mentioned but with recipients for all donors’ kidneys. Also, a resumed table with selected donor-recipients pairs characteristics is displayed:</p>
-<div class="figure" style="text-align: left"><span style="display:block;" id="fig:etresumed"></span>
-<img src="images/etresumed.JPG" alt="Example table returned for the simulation for multiple donors"  />
+<p>According to the imputed rates, the respective Utility/Justice matrix is displaied:</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:eqmujmatx0101"></span>
+<img src="images/eqm_uj_matx0101.JPG" alt="Utility/justice matrix according to the imputed rates" width="339" />
 <p class="caption">
-Figure 4.5: Example table returned for the simulation for multiple donors
+Figure 7.3: Utility/justice matrix according to the imputed rates
+</p>
+</div>
+<p>Users can define 2nd and 3rd quartiles of wiat listed candidates time on dialysis.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:eqmquartiles"></span>
+<img src="images/eqm_quartiles.JPG" alt="Values for 2nd and 3rd quartiles time on dialysis" width="327" />
+<p class="caption">
+Figure 7.4: Values for 2nd and 3rd quartiles time on dialysis
+</p>
+</div>
+<p>Checking each one of the boxes, it is also possible to define allocation priorities mimicking those used on <a href="et.html#et">EuroTransplant</a>: Senior Program, Acceptable Mismatch program, and 000 HLA mismatches between the dodor and recipients.</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:eqmpriors"></span>
+<img src="images/eqm_priors.JPG" alt="Possible allocation priorities" width="250" />
+<p class="caption">
+Figure 7.5: Possible allocation priorities
 </p>
 </div>
 <p><img src="images/kars.jpg" width="84" style="display: block; margin: auto 0 auto auto;" /></p>
-
 </div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="etoptions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lima.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="utility-justice-matrix.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="model-simulation-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

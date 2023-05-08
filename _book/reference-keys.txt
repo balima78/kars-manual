@@ -26,6 +26,12 @@ fig:ukmatch
 fig:uktotalhla
 fig:ukblood
 fig:ukonedonor
+fig:eqmujmatx
+fig:eqmratios
+fig:eqmujmatx0101
+fig:eqmquartiles
+fig:eqmpriors
+fig:eqmmultdonor
 intro
 data
 example
@@ -51,4 +57,8 @@ HLAtotal
 blood
 users-options
 model-simulation-1
+eqm
+utility-justice-matrix
+users-options-1
+model-simulation-2
 conclusion

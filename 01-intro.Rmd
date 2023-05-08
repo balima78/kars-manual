@@ -9,19 +9,21 @@ For patients with end stage renal disease, kidney transplantation provides a low
 Criteria such as: clinical urgency, waiting time, diagnosis, duration of ischaemia, transplant outcomes, number of organs available for paediatric transplants, transplantation in the elderly,
 time on dialysis, human leukocyte antigen (HLA) compatibility and the presence or absence of HLA antibodies; should be taken into account when discussing access to kidney transplantation [@Lima2013c].
 
-This users' manual describes how to use the Kidney Allocation Rules Simulator (KARS) app available from here: <https://balima.shinyapps.io/kars/>.
+This users' manual describes how to use the Kidney Allocation Rules Simulator (KARS) app available from here: <https://txor.shinyapps.io/kars/>.
 
-The manual is divided in 7 chapters, the first one is this **Introduction** (\@ref(intro)), the last one is a simple **Conclusion** (\@ref(conclusion)) and the remaining 5 correspond to the 5 modules on KARS app, four of them  are different Kidney Allocation Systems (KAS).  
+The manual is divided in 8 chapters, the first one is this **Introduction** (\@ref(intro)), the last one is a simple **Conclusion** (\@ref(conclusion)) and the remaining 6 correspond to the 6 modules on KARS app, five of them  are different Kidney Allocation Systems (KAS).  
 
 The chapter \@ref(data) describes the type of data used in the application and how the user can upload their own data. This data is not stored anywhere on our app and the responsibility for its usage is entirely to the user. 
 
 Chapter \@ref(pt) presents the Portuguese algorithm on the allocation of kidneys from deceased donors and how the user can modify some parameters in order to understand how it works.
 
-In chapter \@ref(et) the KAS from EuroTransplnat is described and it's merits discussed.
+In chapter \@ref(et) the KAS from EuroTransplant is described and it's merits discussed.
 
-Chapter \@ref(lima) present a KAS published by us in 2013 [@Lima2013c] and was intented to give a simple (maybe too simple) solution for a complex problem. 
+Chapter \@ref(lima) presents a KAS published by us in 2013 [@Lima2013c] and was intended to give a simple (maybe too simple) solution for a complex problem. 
 
-And at last, chapter \@ref(uk) is dedicated to the KAS from the UK transplant. Those set of rules are the more recent and probably more complex.  
+Chapter \@ref(uk) is dedicated to the KAS from the UK transplant. Those set of rules are more recent and probably more complex.  
+
+And at last, chapter \@ref(eqm) presents the Equity Matrix (EQM) algorithm as a proposal for a new KAS. This algorithm is based on an utility/justice matrix that tries to balance utility and justice criteria for the distribution of such scarce resource. 
 
 The principal aim of this app is to compare different KAS on transplantation. We do not describe an alternative way to design a proposal for a new KAS. In fact, we did not question, possible ways to define models for a new KAS. If a new set of rules on donor-recipient pair selection in kidney transplantation is needed, to achieve this goal distinct sources can be used: evaluation of different data models, a systematic literature review; an idea based on empirical knowledge; or a consensus established at a brainstorm with a selected group of experts [@Lima2019]. 
 
