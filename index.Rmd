@@ -17,21 +17,27 @@ description: "This is the user manual for KARS application using the bookdown pa
 knitr::opts_chunk$set(echo = F, message = F, warning = F)
 doc.type <- knitr::opts_knit$get('rmarkdown.pandoc.to')
 
-knitr::include_graphics('images/kidneys.jpg', dpi = 100)
+knitr::include_graphics('images/kidneys.jpg', dpi = 140)
 ```
 
-The **Kidney Allocation Rules Simulator** (KARS) is an application that allows to simulate different kidney allocation rules in transplantation.
+Transplants' Open Registry (TxOR) is a private initiative intended to provide high-quality information about kidney transplantation and based solely on open source resources.
+
+[![TxOR](images/txor.JPG)](https://txor.netlify.app/)
+
+The **Kidney Allocation Rules Simulator** (KARS) is a product from the TxOR initiative and it allows to simulate different kidney allocation rules in transplantation.
 
 This application is built on _{shiny}_ and is available on _shinyapps.io_: <https://txor.shinyapps.io/kars/>
 
-Before implementing new rules, it is necessary to test them in order to dissipate, as much as possible, doubts questioning implementation’s success. The development of this application had as motivation being an aid to clarify the usefulness and efficiency of new set of rules for kidney allocation.
+Before implementing new rules, it is necessary to test them in order to dissipate, as much as possible, doubts questioning implementations success. 
+
+The development of this application had as motivation being an aid to clarify the usefulness and efficiency of new set of rules for kidney allocation.
 
 ```{r heads, fig.cap='HEADS | FMUP', fig.align='right', echo=FALSE}
 library(png)
-knitr::include_graphics('images/heads.png', dpi = 200)
+knitr::include_graphics('images/heads.png', dpi = 300)
 ```
 
-KARS app is part of my PhD thesis on the PhD program in Health Data Science (HEADS).
+KARS app is part of my PhD thesis on the PhD program in Health Data Science (HEADS) from FMUP.
 
 ```{block, type='bookm', echo = T}
 **Disclaimer:**
