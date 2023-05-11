@@ -25,6 +25,8 @@ Chapter \@ref(uk) is dedicated to the KAS from the UK transplant. Those set of r
 
 And at last, chapter \@ref(eqm) presents the Equity Matrix (EQM) algorithm as a proposal for a new KAS. This algorithm is based on an utility/justice matrix that tries to balance utility and justice criteria for the distribution of such scarce resource. 
 
+The implementation of the allocation systems is based on the functions available from the R package {histoc} [@LimaReis2022].
+
 The principal aim of this app is to compare different KAS on transplantation. We do not describe an alternative way to design a proposal for a new KAS. In fact, we did not question, possible ways to define models for a new KAS. If a new set of rules on donor-recipient pair selection in kidney transplantation is needed, to achieve this goal distinct sources can be used: evaluation of different data models, a systematic literature review; an idea based on empirical knowledge; or a consensus established at a brainstorm with a selected group of experts [@Lima2019]. 
 
 Although, any proposal for a new KAS has to be submitted to a set of simulations in order to predict its outcomes as far as possible. Only publishing a new proposal in a peer reviewed paper will allow public scrutiny of its merits and its assessment with data from different sources.

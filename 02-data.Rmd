@@ -93,7 +93,7 @@ For candidates' dataset we recommend a sample size no longer than 2000 and for d
 
 This ratio is suggested as guarantee that selected candidates for each KAS are comparable and we can spot differences due to KAS rules. As each donor is allocated to two candidates, with a number of donors close to half the number of candidates, we would have almost all candidates selected for all KAS simulations. 
 
-> Also, synthetic data for KARS app can be generated from the R package [{simK}](https://simk.netlify.app/). This package was developed mainly for allowing data generation to use on KARS simulations.   
+> Also, synthetic data for KARS app can be generated from the R package [{simK}](https://txopen.github.io/simK/index.html). This package was developed mainly for allowing data generation to use on KARS simulations.   
 
 ```{r fig.align='right', echo=FALSE}
 knitr::include_graphics('images/kars.jpg', dpi = 200)

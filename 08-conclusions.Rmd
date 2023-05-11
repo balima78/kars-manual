@@ -9,6 +9,8 @@ Kidney transplantation is the preferred treatment for many ESRD patients; howeve
 
 For defining and implementing a new KAS, we do not need to reinvent the wheel. At this point, we should be able to process data, compare it with other experiences, looking abroad for allocation systems that work and can help us to improve and fulfill our purposes [@Lima2018].
 
+To guarantee the process legitimacy when seeking and evaluating new and existing rules for kidney allocation, we can apply (EO)M principles, with the four conditions of “accountability for reasonableness”, as described elsewhere [@Lima2022].
+
 ```{block, type='bookm', echo = T}
 **Disclaimer:**
 KARS application is intended for research purposes only, not for clinical or commercial use. It is a non-profit service to the scientific community, provided on an 'AS-IS' basis without any warranty, expressed or implied. The authors can not be held liable in any way for the service provided here.
